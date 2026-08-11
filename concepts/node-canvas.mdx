@@ -1,0 +1,58 @@
+---
+title: "Understanding the Rainfrog Node Canvas"
+sidebarTitle: "Node Canvas"
+description: "Learn how Rainfrog's visual node canvas replaces text prompts with a drag-and-connect workflow that drives AI image and video generation."
+---
+
+The Rainfrog node canvas is your creative workspace. Instead of writing text prompts, you build a visual graph by connecting asset nodes to a generator node — and Rainfrog's graph engine handles the rest. Every decision you make on the canvas, from the product you're featuring to the lighting style you want, becomes part of the AI generation automatically.
+
+## The canvas at a glance
+
+When you open a project in the [Rainfrog studio](https://app.rainfrog.ai), you start with a blank canvas. From there, you drag nodes onto the canvas from the side panel, wire them together, and click **Generate**. The canvas auto-saves your work as a project every time you make a change, so you never lose progress mid-session.
+
+Think of the canvas as a visual recipe. Each node you place represents one ingredient — a product, a character, a visual style, a setting — and the connections between them tell Rainfrog how those ingredients relate to each other in the final output.
+
+## Node types
+
+Rainfrog provides five node types. Four are asset nodes that supply creative inputs; one is the output node that produces your generation.
+
+| Node | Role |
+|---|---|
+| **Product** | Holds the product you want to feature — a garment, bag, packshot, or any physical item |
+| **Character** | Defines the person or model in the scene, drawn from Rainfrog's stock library or your own reference image |
+| **Style** | Encodes the visual treatment: color palette, lighting schema, and mood for every image in the run |
+| **Environment** | Sets the scene — the background or setting your product and character inhabit |
+| **Generator** | The output node; receives all connected asset nodes and produces images or video when you click Generate |
+
+## How the graph becomes a generation
+
+When you click **Generate**, Rainfrog traverses every connection in your node graph from left to right. It resolves the output of each asset node — the product image, the character reference, the style parameters, the environment — and assembles the full AI generation instructions automatically. You never write a single line of prompt text.
+
+Rainfrog's graph engine also applies built-in creative taste at this stage, filling in aesthetics and composition decisions that ensure your output looks campaign-ready rather than like a raw AI draft.
+
+## Connecting nodes
+
+To connect two nodes, drag from the **output handle** (the dot on the right edge) of an asset node to the **input handle** (the dot on the left edge) of the generator node. A wire appears between them, confirming the connection.
+
+A few things to know:
+
+- You can connect multiple asset nodes to a single generator node at the same time.
+- The order in which you connect nodes does not affect the output — Rainfrog resolves them all together.
+- To remove a connection, click the wire and press **Delete**, or drag the handle away from its target.
+
+<Tip>
+  You can connect multiple product nodes to a single generator node to produce a campaign that features several products in the same visual world.
+</Tip>
+
+## Undo, redo, and auto-save
+
+Every change you make on the canvas — adding a node, connecting wires, uploading an asset — is auto-saved to your project instantly. You don't need to manually save.
+
+If you make a mistake or want to backtrack, use the standard keyboard shortcuts:
+
+- **Undo:** `Cmd + Z` (Mac) / `Ctrl + Z` (Windows)
+- **Redo:** `Cmd + Shift + Z` (Mac) / `Ctrl + Shift + Z` (Windows)
+
+<Note>
+  Every node configuration is saved inside the project — you can come back, swap a node, and regenerate at any time.
+</Note>

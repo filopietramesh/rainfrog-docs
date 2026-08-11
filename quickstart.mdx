@@ -1,47 +1,62 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Get Started with Rainfrog in 5 Steps"
+sidebarTitle: "Quickstart"
+description: "Create your first Rainfrog project, build a workflow from a template, connect your assets, and generate your first campaign images in minutes."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
+This guide walks you through everything from creating your account to generating your first batch of campaign images. By the end, you'll have a working workflow on the canvas and a set of outputs you can iterate on immediately.
 
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+<Tip>
+  If you don't have assets ready, every node type has a built-in library you can use — no uploads required to generate your first campaign.
+</Tip>
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
-
-    ```bash
-    npm install your-package
-    ```
+  <Step title="Create your account">
+    Go to [app.rainfrog.ai/signup](https://app.rainfrog.ai/signup) and sign up for free. A free account lets you explore the studio, browse templates, and get familiar with the canvas before committing to a plan. When you're ready to run full generation jobs, subscribe to a paid plan from the **Manage Plan** tab — each plan comes with a monthly credit allowance that powers your image and video generation.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
 
-    ```bash
-    your-cli init
-    ```
+  <Step title="Create a new project">
+    After you log in, open the **Projects** tab. Click **New Project**, give your project a name, and hit **Create**. The canvas opens automatically and is ready for you to start building. Your project auto-saves as you work, so you won't lose progress if you close the tab.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
 
-    ```bash
-    your-cli start
-    ```
+  <Step title="Add a workflow template">
+    On the canvas, click **Browse Templates** — or open the **Workflows** tab in the sidebar — to see the full template library. Pick a preset that matches what you want to create:
+
+    - **Fashion Shooting** — on-model shots with a product and a character
+    - **Product Still Life** — styled product placement in an environment
+    - **UGC Content** — creator-style social visuals
+
+    Selecting a template drops a pre-wired set of nodes onto your canvas, so you can see how a complete workflow is structured before you change anything.
+  </Step>
+
+  <Step title="Connect your assets">
+    With the template on the canvas, replace the placeholder nodes with your own assets — or keep the built-in library assets for your first run:
+
+    1. **Product node** — drag a Product node onto the canvas and upload your product image, or select one from the built-in product library.
+    2. **Character node** — add a Character node and choose a character reference from your library or the built-in options.
+    3. **Style node** — add a Style node to define the visual aesthetic of your output.
+    4. **Environment node** — add an Environment node to set the scene or backdrop.
+
+    Connect each asset node to the **Generator node** by dragging from the output port of each asset node to the corresponding input port on the generator. When all inputs are wired up, the generator node shows a ready state.
+  </Step>
+
+  <Step title="Generate">
+    Click the **Generate** button. Rainfrog reads your node graph, assembles the AI instructions automatically, and produces a campaign set of images (or video clips, if you're using a video workflow). When generation completes, your outputs appear in the results panel.
+
+    From here, you can:
+    - **Swap a node** — disconnect an asset node, connect a different one, and click Generate again to explore a variation
+    - **Duplicate the workflow** — copy the entire graph to run parallel creative directions
+    - **Download your outputs** — save individual images or the full batch to your device
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+## Keep exploring
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+<CardGroup cols={2}>
+  <Card title="Node Canvas" icon="diagram-project" href="/concepts/node-canvas">
+    Deep-dive into how nodes, ports, and connections work on the Rainfrog canvas.
+  </Card>
+  <Card title="Your First Campaign" icon="images" href="/guides/first-campaign">
+    A step-by-step walkthrough of building a complete fashion campaign from scratch.
+  </Card>
+</CardGroup>

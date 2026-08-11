@@ -1,0 +1,81 @@
+{
+  "projectType": "saas",
+  "projectName": "Rainfrog",
+  "projectDescription": "A node-based AI studio for generating campaign-level images and videos — wire products, characters, styles, and environments into visual workflows, then generate coherent campaign sets without writing a single prompt.",
+  "theme": "almond",
+  "primaryColor": "#faf6f4",
+  "lightColor": "#e4dddd",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "plans-and-credits"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/node-canvas",
+              "concepts/asset-libraries",
+              "concepts/workflows",
+              "concepts/generation"
+            ]
+          },
+          {
+            "group": "Studio",
+            "pages": [
+              "studio/projects",
+              "studio/assets",
+              "studio/workflows",
+              "studio/settings"
+            ]
+          },
+          {
+            "group": "How-To",
+            "pages": [
+              "guides/first-campaign",
+              "guides/brand-consistency",
+              "guides/video-generation",
+              "guides/templates-gallery"
+            ]
+          },
+          {
+            "group": "Account",
+            "pages": [
+              "account/manage-plan",
+              "account/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Node-based visual canvas for building AI generation workflows",
+    "Prompt-free image and video generation from connected asset nodes",
+    "Asset libraries for products, characters, styles, and environments",
+    "Campaign-level batch generation with visual consistency across all outputs",
+    "Reusable workflow templates and a public gallery to clone and remix",
+    "Auto-saved projects with undo/redo",
+    "Normal and Pro image quality models",
+    "Priority generation queue on paid plans",
+    "Monthly credit system with rollover and one-time top-ups"
+  ],
+  "publicApiSurface": [
+    "Projects tab — canvas workspace for building and saving node workflows",
+    "Workflows tab — browse, clone, and manage workflow configurations",
+    "Assets tab — upload and manage products, characters, styles, and environments",
+    "Manage Plan tab — subscription management, credit balance, billing",
+    "Settings tab — account preferences and configuration",
+    "Generate button — trigger batch image or video generation from a workflow",
+    "Public gallery — browse and clone community workflows",
+    "Template presets — Fashion Shooting, Product Still Life, UGC Content"
+  ]
+}

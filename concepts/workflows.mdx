@@ -1,0 +1,113 @@
+---
+title: "Workflows: Reusable Visual Recipes for AI Campaigns"
+sidebarTitle: "Workflows"
+description: "Understand how Rainfrog workflows let you save, reuse, clone, and remix node graphs to produce consistent AI-generated campaigns at scale."
+---
+
+A workflow is a saved node graph — your fully configured canvas — that you can run repeatedly, share with the community, or clone from someone else. Every project in Rainfrog is a workflow. Once you've built a workflow that produces the output you want, you can reuse it for new campaigns simply by swapping in different assets, without rebuilding anything from scratch.
+
+## What a workflow contains
+
+A workflow stores everything on your canvas:
+
+- The **nodes** you've placed: product, character, style, environment, and generator nodes
+- The **connections** (wires) between those nodes
+- Any **asset selections** made within each node — which product image, which character, which style
+- The **generator settings** — image vs. video, quality mode, and any run configuration
+
+All of this is saved automatically inside the project. When you reopen a project, the canvas restores exactly as you left it, ready to generate again.
+
+## Starting from a template
+
+Rainfrog includes three built-in workflow templates designed for the most common campaign types. Templates give you a fully wired canvas to start from — no setup required.
+
+| Template | Best for |
+|---|---|
+| **Fashion Shooting** | Apparel and accessories campaigns featuring a model character |
+| **Product Still Life** | Packshot and object-focused campaigns without a character |
+| **UGC Content** | Casual, creator-style content with an authentic, handheld aesthetic |
+
+To load a template:
+
+<Steps>
+  <Step title="Open the Workflows tab">
+    In the [Rainfrog studio](https://app.rainfrog.ai), click the **Workflows** tab in the left sidebar.
+  </Step>
+  <Step title="Browse templates">
+    Click **Browse Templates** to see all available presets. Select the template that matches your campaign type.
+  </Step>
+  <Step title="Open in a new project">
+    Click **Use Template**. Rainfrog opens the template as a new project with all nodes pre-wired and ready to configure.
+  </Step>
+  <Step title="Swap in your assets">
+    Replace the placeholder nodes with your own product, character, style, or environment assets and click **Generate**.
+  </Step>
+</Steps>
+
+## The public gallery
+
+The public gallery is a collection of workflows created and shared by the Rainfrog community. Every workflow in the gallery is available to clone — for free — into your own account.
+
+Community workflows include creative starting points like:
+
+<CardGroup cols={2}>
+  <Card title="White Flower" icon="flower">
+    A soft, studio-lit still life workflow with a clean floral environment.
+  </Card>
+  <Card title="Set Selfie" icon="camera">
+    A behind-the-scenes UGC-style workflow with a candid, on-set character feel.
+  </Card>
+  <Card title="Chanel Still Life" icon="gem">
+    A high-fashion product still life with a luxury editorial aesthetic.
+  </Card>
+  <Card title="Beauty Set" icon="sparkles">
+    A close-up beauty and cosmetics workflow with studio-quality lighting.
+  </Card>
+  <Card title="Street Rockstar" icon="guitar">
+    An urban streetwear workflow with moody, outdoor environment anchors.
+  </Card>
+  <Card title="Golden Room" icon="sun">
+    A warm, golden-hour interior environment workflow for lifestyle campaigns.
+  </Card>
+</CardGroup>
+
+To clone a gallery workflow, open it in the gallery and click **Clone**. Rainfrog copies the entire node graph into a new project in your account. From there, swap in your own assets and generate.
+
+<Tip>
+  Clone a workflow from the public gallery whenever you want a strong creative starting point. Swap in your own product, character, or style to make it yours.
+</Tip>
+
+## Building your own workflow from scratch
+
+If you want full creative control from the beginning, start with a blank canvas.
+
+<Steps>
+  <Step title="Create a new project">
+    Click **New Project** in the studio. An empty canvas opens.
+  </Step>
+  <Step title="Add asset nodes">
+    Drag a **Product**, **Character**, **Style**, and/or **Environment** node onto the canvas from the node panel. You don't need all four — use what your campaign requires.
+  </Step>
+  <Step title="Configure each node">
+    Click each node to select your asset: choose a product from your library, pick a stock character or upload a reference, select a style, and set your environment.
+  </Step>
+  <Step title="Add a generator node">
+    Drag a **Generator** node onto the canvas and connect your asset nodes to it.
+  </Step>
+  <Step title="Generate">
+    Choose your output type (image or video) and quality mode, then click **Generate**. Your workflow saves automatically as you work.
+  </Step>
+</Steps>
+
+## Reusing and remixing
+
+Once you have a workflow that produces results you like, you have two paths for reusing it:
+
+- **Duplicate the project** to preserve the original workflow while experimenting with a variation. Duplication copies the entire canvas into a new project — the original remains untouched.
+- **Swap an asset node** directly in the existing project to repurpose the workflow for a new campaign. For example, replace the product node with a new garment to instantly adapt a fashion shoot workflow for a different SKU, or replace the character node to feature a different model without changing anything else.
+
+Both approaches let you build a library of proven workflows that you can remix quickly for new clients, new seasons, or new product lines — without starting from scratch each time.
+
+<Info>
+  Each Rainfrog account project is its own saved workflow. You can have up to 6 (Hobby), 25 (Pro), or unlimited (Ultra) projects.
+</Info>

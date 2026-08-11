@@ -1,0 +1,84 @@
+---
+title: "How AI Generation Works in Rainfrog"
+sidebarTitle: "Generation"
+description: "Learn how Rainfrog traverses your node graph to produce campaign-ready images and video, and how quality modes, credits, and iteration work."
+---
+
+When you click **Generate**, Rainfrog traverses your node graph, resolves the output of every connected asset node, and assembles the AI generation instructions automatically. Within seconds, it begins producing campaign-ready images or video — no prompt writing, no manual parameter tuning. The output is designed to look like it came from a coordinated creative shoot, not a series of one-off generations.
+
+## Image generation
+
+The generator node produces a **campaign set** — multiple images in a single run — not a single image. Every image in the set shares the same style, character, product, and environment anchors, so they look cohesive and intentional when used together.
+
+This is the core difference between Rainfrog and a standard image generator: the output is campaign-ready by design. You get a collection of visuals that work together as a unified campaign, ready for use across different formats, placements, and channels.
+
+<Note>
+  Rainfrog generates a campaign *set* — multiple images per run — not a single image. This is by design: the output is meant to be used together as a unified visual campaign.
+</Note>
+
+## Normal vs. Pro quality
+
+Every image generation run lets you choose between two quality modes.
+
+| Mode | Best for | Speed | Credit cost |
+|---|---|---|---|
+| **Normal** | Iteration, drafts, creative exploration | Faster | Lower |
+| **Pro** | Final campaign output, client delivery | Priority queue on paid plans | Higher |
+
+Normal quality is faster and uses fewer credits, making it ideal for working through multiple creative directions quickly. Pro quality produces higher-resolution output with greater detail and better product fidelity — use it when you're ready to deliver.
+
+<Tip>
+  Use Normal quality for fast iteration while refining your workflow. Switch to Pro quality for the final campaign output.
+</Tip>
+
+## Video generation
+
+The same workflow that generates a campaign image set can also produce short-form campaign video clips. To generate video, connect your asset nodes to a **video generator node** instead of (or in addition to) the image generator node.
+
+The same asset consistency that applies to images carries over to video: the character, product, style, and environment anchors remain locked across every frame, so your video output matches the visual world of your image campaign.
+
+Video generation is available alongside image generation within the same project — you don't need to rebuild your workflow to produce both formats.
+
+## Credits
+
+Each generation run costs credits. The exact credit cost depends on two factors:
+
+- **Output type** — image runs cost fewer credits than video runs
+- **Quality mode** — Normal runs cost fewer credits than Pro runs
+
+Your current credit balance is always visible in the studio header. Credits refresh each month on your billing date and **roll over** — unused credits don't expire at the end of the month.
+
+If you run low on credits before your next billing date, you can purchase a one-time top-up at any time from **Settings → Manage Plan** without changing your subscription tier.
+
+## Generation time
+
+Rainfrog processes your generation in the background so you can keep working while it runs.
+
+| Output type | Typical time |
+|---|---|
+| Image campaign set (Normal) | Under 95 seconds |
+| Image campaign set (Pro) | Priority queue on Pro and Ultra plans |
+| Video | Varies by clip length |
+
+Pro and Ultra plan subscribers receive priority queue access for Pro quality generations, which reduces wait times during peak usage.
+
+## Reviewing and iterating
+
+After a generation run completes, the output appears directly in your project canvas. From there:
+
+<Steps>
+  <Step title="Review the campaign set">
+    Browse all images (or the video clip) produced in the run. Compare them to evaluate composition, product placement, character consistency, and overall aesthetic.
+  </Step>
+  <Step title="Identify what to change">
+    Decide which element to adjust — the environment, the style, the character pose, or the product framing. Each of these maps to a specific node on your canvas.
+  </Step>
+  <Step title="Swap the relevant node">
+    Click the node you want to change and select a different asset, or replace the node entirely. You don't need to touch any other part of the workflow.
+  </Step>
+  <Step title="Generate again">
+    Click **Generate** to produce a fresh campaign set with the updated configuration. Each run is independent — your previous outputs remain visible in the project history so you can compare runs side by side.
+  </Step>
+</Steps>
+
+Iterating on a Rainfrog workflow is fast because changing one node only changes one variable. You keep everything else — the character, the style, the product — consistent while you dial in the element you want to refine.

@@ -1,0 +1,46 @@
+---
+title: "Generate Campaign Video in Rainfrog"
+sidebarTitle: "Video Generation"
+description: "Use the Video Generator node to produce short-form campaign clips from your existing workflow — same assets, same visual consistency, motion output."
+---
+
+Rainfrog's video generator lets you produce short-form campaign clips from the same workflow you use for images. The same asset connections, the same visual consistency — routed to a video output instead of a still image. If you've already built a working image workflow, you're most of the way to a video campaign.
+
+## How video generation works
+
+Instead of connecting your asset nodes to an image Generator node, you connect them to the **Video Generator** node. The same Product, Character, Style, and Environment inputs are used — Rainfrog produces a short clip that inherits all the visual anchors from your workflow. Your brand's character stays consistent, your product renders correctly, and the visual treatment from your style node carries through into motion.
+
+## Adding a video generator node
+
+In your canvas, drag a **Video Generator** node from the sidebar. Connect your asset nodes — Product, Character, Style, and Environment — to its input handles. The connection flow is identical to image generation: drag the output handle of each asset node to the matching input handle on the Video Generator node.
+
+If you already have an image workflow, you can add the Video Generator node alongside the existing Generator node and connect the same asset nodes to both. This lets you produce image and video output from the same set of assets in the same project.
+
+## Generating
+
+Click **Generate** to start the run. Video generation uses more credits than image generation, and generation time is longer than for a still image set. Normal and Pro quality modes are both available — Normal is a good starting point for previewing the motion output, while Pro is better suited for final delivery.
+
+<Note>
+  Video generation is available on all paid plans (Hobby, Pro, Ultra). It costs more credits per run than image generation.
+</Note>
+
+## Use cases
+
+The Video Generator node works well across a range of short-form content needs:
+
+- **Instagram Reels, TikTok, and Stories** — feed-native motion content that matches your brand's visual identity
+- **Product teaser videos** — short clips showcasing a product in a styled environment
+- **Lookbook motion content** — bring editorial fashion imagery to life with subtle motion
+- **DTC ad creative** — short-form video assets for paid social campaigns, generated at scale
+
+## Tips for better video output
+
+Getting strong results from the Video Generator node comes down to a few key choices:
+
+- **Keep the environment grounded.** Highly abstract or conceptual environments can produce unstable motion. Environments with clear spatial structure — a studio, a room, a defined outdoor setting — tend to generate cleaner clips.
+- **Use a character reference with a clear, neutral starting pose.** The video generator animates from the reference; a neutral, upright pose gives it more range.
+- **Lean on cinematic or editorial style nodes.** Style presets with cinematic lighting, editorial mood, or strong directional light tend to translate well into motion and produce visually compelling clips.
+
+<Tip>
+  Start with an image workflow that produces results you like, then swap the image Generator node for a Video Generator node to produce a matching motion version of the campaign.
+</Tip>

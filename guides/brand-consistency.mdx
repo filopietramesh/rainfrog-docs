@@ -1,0 +1,49 @@
+---
+title: "Maintain Brand Consistency Across AI-Generated Campaigns"
+sidebarTitle: "Brand Consistency"
+description: "Use Rainfrog's asset anchoring and style presets to keep every campaign image on-brand — same character, product, lighting, and visual tone."
+---
+
+Brand consistency across a campaign set means every image shares the same character, product rendering, lighting, and visual tone. Rainfrog achieves this through reference-based asset anchoring, not text prompts — so consistency is built into the structure of your workflow rather than depending on how carefully you phrase a description.
+
+## Why visual consistency matters
+
+In prompt-based tools, each generation samples independently from the model. Even a small phrasing change — or no change at all — can shift the character's face, alter the product's color temperature, or change how materials render. This visual drift makes it hard to produce a cohesive campaign set.
+
+Rainfrog solves this differently. Your brand's visual DNA lives in the workflow itself — in the uploaded product image, the character reference, the style preset, and the environment node. Every image generated from that workflow inherits the same anchors. Change the pose or the scene, and the character and product stay locked.
+
+## Product anchoring
+
+Upload your actual product image as a Product asset. Rainfrog holds the product's shape, color, and material properties constant across all images generated from that workflow. You don't describe the product in words — you show it, and Rainfrog keeps it visually stable through every generation.
+
+To maintain consistency across a product line, create one Product node per SKU. Swap the active Product node between runs to generate a matching campaign set for each colorway or variant without touching anything else in the workflow.
+
+## Character consistency
+
+Upload a clear portrait reference for your brand's character — a well-lit front-facing photo with a neutral expression works best. Rainfrog uses reference-based conditioning to keep the character's face, proportions, and body language consistent across every pose, outfit, and environment variation.
+
+You don't need to describe the character in a prompt. The reference image carries the information, and Rainfrog applies it consistently regardless of what else changes in the scene.
+
+## Style presets
+
+Create a custom style by uploading three to five images that represent your brand's visual aesthetic — consider color palette, lighting quality, mood, and overall tonal treatment. Once saved as a Style asset, every image generated from a workflow using that style inherits the same visual treatment.
+
+Built-in style presets are also available if you're starting from scratch or want to experiment before committing to a custom look.
+
+## Environment locking
+
+Define your campaign's world with an Environment node. Using the same environment node across multiple generation runs keeps the background, lighting direction, and set design consistent. If your campaign calls for a studio setup, a specific outdoor location, or an editorial interior, lock it in once and it carries through every image in the set.
+
+## Reviewing consistency
+
+After generating, review the full campaign set together — not image by image. Ask: do all images feel like they came from the same shoot? Look at the lighting direction, the character's facial features, the product rendering, and the overall color temperature across the set.
+
+If something feels off, adjust the Style node or refresh your character reference and regenerate. Because the changes are structural, every image in the new set will reflect the update uniformly.
+
+<Tip>
+  For a seasonal campaign, build one workflow with your campaign's style, environment, and character locked in. Swap only the Product node between runs to generate consistent imagery for every SKU.
+</Tip>
+
+<Info>
+  Rainfrog uses reference-based conditioning, not text descriptions, to maintain character and product consistency. This is why consistency doesn't break when you change the pose or environment.
+</Info>

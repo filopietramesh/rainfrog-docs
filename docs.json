@@ -1,72 +1,77 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Rainfrog",
+  "theme": "almond",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    "primary": "#faf6f4",
+    "light": "#e4dddd"
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "https://media.brand.dev/70e2090a-8986-4585-80bf-5eac18f67a0e.svg",
+    "dark": "https://media.brand.dev/70e2090a-8986-4585-80bf-5eac18f67a0e.svg"
   },
+  "favicon": "https://icons.duckduckgo.com/ip3/rainfrog.ai.ico",
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Start for free",
+      "href": "https://app.rainfrog.ai/signup"
     }
   },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "plans-and-credits"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/node-canvas",
+              "concepts/asset-libraries",
+              "concepts/workflows",
+              "concepts/generation"
+            ]
+          },
+          {
+            "group": "Studio",
+            "pages": [
+              "studio/projects",
+              "studio/assets",
+              "studio/workflows",
+              "studio/settings"
+            ]
+          },
+          {
+            "group": "How-To",
+            "pages": [
+              "guides/first-campaign",
+              "guides/brand-consistency",
+              "guides/video-generation",
+              "guides/templates-gallery"
+            ]
+          },
+          {
+            "group": "Account",
+            "pages": [
+              "account/manage-plan",
+              "account/faq"
+            ]
+          }
+        ]
+      }
     ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://www.rainfrog.ai"
     }
   }
 }
