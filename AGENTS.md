@@ -31,3 +31,12 @@
 
 {/* Define what should and shouldn't be documented */}
 {/* Example: Don't document internal admin features */}
+
+## Cursor Cloud specific instructions
+
+- This repo is a Mintlify docs site (MDX pages + `docs.json`). There is no `package.json`, no automated test suite, and no local build step — Mintlify builds and deploys via its GitHub app on push to the default branch.
+- The only tool dependency is the global `mint` CLI, installed by the environment update script. Global npm installs are not user-writable here, so the update script installs with `sudo` while preserving `PATH` (nvm's npm). `mint` ends up at `/usr/bin/mint`.
+- Run the dev server from the repo root (where `docs.json` lives): `mint dev` serves the preview at `http://localhost:3000`. Start it in a long-lived session (e.g. tmux); it is a foreground process.
+- Validate content/links with `mint broken-links` (used here as the lint/check step).
+- `mint dev` prints "Run mint login in the cli to activate search" — search requires auth, but login is NOT needed for local preview/rendering, so it is safe to ignore for local development.
+- If the dev server misbehaves after a CLI change, run `mint update` to refresh the CLI.
