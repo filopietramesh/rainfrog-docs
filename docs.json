@@ -3,14 +3,17 @@
   "name": "Rainfrog",
   "theme": "almond",
   "colors": {
-    "primary": "#faf6f4",
+    "primary": "#064122",
     "light": "#e4dddd"
   },
   "logo": {
-    "light": "https://media.brand.dev/70e2090a-8986-4585-80bf-5eac18f67a0e.svg",
-    "dark": "https://media.brand.dev/70e2090a-8986-4585-80bf-5eac18f67a0e.svg"
+    "light": "/images/rainfrogiconwhite.png",
+    "dark": "/images/rainfrogiconblack.png"
   },
-  "favicon": "https://icons.duckduckgo.com/ip3/rainfrog.ai.ico",
+  "favicon": {
+    "light": "/images/rainfrogiconwhite.png",
+    "dark": "/images/rainfrogiconblack.png"
+  },
   "navbar": {
     "primary": {
       "type": "button",
