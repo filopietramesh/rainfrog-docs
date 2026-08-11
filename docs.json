@@ -3,8 +3,9 @@
   "name": "Rainfrog",
   "theme": "almond",
   "colors": {
-    "primary": "#064122",
-    "light": "#e4dddd"
+    "primary": "#e8e8e8",
+    "light": "#e4dddd",
+    "dark": "#054c26"
   },
   "logo": {
     "light": "/images/rainfrogiconwhite.png",
