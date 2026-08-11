@@ -1,46 +1,65 @@
 ---
 title: "Generate Short-Form Campaign Videos in Rainfrog Studio"
 sidebarTitle: "Video Generation"
-description: "Use the Video Generator node to produce short-form campaign clips from your existing workflow — same assets, same visual consistency, motion output."
+description: "Use the Video Generator node to produce short-form campaign clips — pick a model, wire the inputs it needs, and generate motion from your workflow."
 ---
 
-Rainfrog's video generator lets you produce short-form campaign clips from the same workflow you use for images. The same asset connections, the same visual consistency — routed to a video output instead of a still image. If you've already built a working image workflow, you're most of the way to a video campaign.
+Rainfrog's **Video Generator** produces short-form campaign clips from the same project you use for stills. Add the node, choose a video model, connect the inputs that model expects, and generate. If you already have a strong image workflow, you are most of the way to a matching motion piece.
+
+<Frame>
+  <img src="/images/studio-add-node.png" alt="Searching for Video Generator on the Rainfrog canvas" />
+</Frame>
 
 ## How video generation works
 
-Instead of connecting your asset nodes to an image Generator node, you connect them to the **Video Generator** node. The same Product, Character, Style, and Environment inputs are used — Rainfrog produces a short clip that inherits all the visual anchors from your workflow. Your brand's character stays consistent, your product renders correctly, and the visual treatment from your style node carries through into motion.
+Video uses a dedicated **Video Generator** node — it is not a mode on the Image Generator. Select a model on the node. The input handles update to match that model. Connect images, frames, text, or video references as shown, then click **Generate**. Credit cost and duration options appear on the node before you run.
 
-## Adding a video generator node
+Video generation is available on paid plans and typically costs more credits than a still.
 
-In your canvas, drag a **Video Generator** node from the sidebar. Connect your asset nodes — Product, Character, Style, and Environment — to its input handles. The connection flow is identical to image generation: drag the output handle of each asset node to the matching input handle on the Video Generator node.
+## Video models
 
-If you already have an image workflow, you can add the Video Generator node alongside the existing Generator node and connect the same asset nodes to both. This lets you produce image and video output from the same set of assets in the same project.
+| Model | Typical inputs |
+|---|---|
+| **Kling 2.6** | **Image**, optional **End image** |
+| **Kling 3.0** (default) | **First Frame**, optional **Last Frame**, optional **References** |
+| **Seedance 2.0** | **Text**, **Image assets**, optional **Video assets** |
 
-## Generating
+Use Image nodes, Video nodes, Full Body outputs, or Image Generator results as sources for those handles when the connection types match.
 
-Click **Generate** to start the run. Video generation uses more credits than image generation, and generation time is longer than for a still image set. Normal and Pro quality modes are both available — Normal is a good starting point for previewing the motion output, while Pro is better suited for final delivery.
+## Adding a Video Generator
 
-<Note>
-  Video generation is available on all paid plans. It costs more credits per run than image generation.
-</Note>
+<Steps>
+  <Step title="Open your project">
+    Work in a project that already has strong still assets, or start fresh.
+  </Step>
+  <Step title="Add the Video Generator">
+    From the floating dock, add a **Video Generator** node.
+  </Step>
+  <Step title="Choose a model">
+    Pick Kling 2.6, Kling 3.0, or Seedance 2.0. Confirm the input handles that appear.
+  </Step>
+  <Step title="Connect inputs">
+    Wire the frames, references, text, or media the model asks for. Keep subject and style consistent with your still campaign when you want matching motion.
+  </Step>
+  <Step title="Generate">
+    Check duration and credit cost on the node, then click **Generate**. Keep working on the canvas while the job runs in the background.
+  </Step>
+</Steps>
 
 ## Use cases
 
-The Video Generator node works well across a range of short-form content needs:
-
-- **Instagram Reels, TikTok, and Stories** — feed-native motion content that matches your brand's visual identity
-- **Product teaser videos** — short clips showcasing a product in a styled environment
-- **Lookbook motion content** — bring editorial fashion imagery to life with subtle motion
-- **DTC ad creative** — short-form video assets for paid social campaigns, generated at scale
+- **Reels, TikTok, and Stories** — short motion that matches your brand look
+- **Product teasers** — a still hero frame animated into a short clip
+- **Lookbook motion** — subtle movement on editorial fashion frames
+- **Paid social** — variants for ads without rebuilding the whole campaign
 
 ## Tips for better video output
 
-Getting strong results from the Video Generator node comes down to a few key choices:
-
-- **Keep the environment grounded.** Highly abstract or conceptual environments can produce unstable motion. Environments with clear spatial structure — a studio, a room, a defined outdoor setting — tend to generate cleaner clips.
-- **Use a character reference with a clear, neutral starting pose.** The video generator animates from the reference; a neutral, upright pose gives it more range.
-- **Lean on cinematic or editorial style nodes.** Style presets with cinematic lighting, editorial mood, or strong directional light tend to translate well into motion and produce visually compelling clips.
+- Start from a still you already like, then animate that frame
+- Prefer environments with clear spatial structure (studio, room, defined outdoor) over highly abstract scenes
+- Use a character pose that reads clearly as a starting frame
+- Keep product and character references consistent with your image workflow
 
 <Tip>
-  Start with an image workflow that produces results you like, then swap the image Generator node for a Video Generator node to produce a matching motion version of the campaign.
+  Generate a strong Image Generator result first, then connect that image into the Video Generator as the starting frame for Kling models.
 </Tip>

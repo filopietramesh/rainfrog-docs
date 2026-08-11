@@ -4,51 +4,66 @@ sidebarTitle: "Quickstart"
 description: "Create your first Rainfrog project, build a workflow from a template, connect your assets, and generate your first campaign images in minutes."
 ---
 
-This guide walks you through everything from creating your account to generating your first batch of campaign images. By the end, you'll have a working workflow on the canvas and a set of outputs you can iterate on immediately.
+This guide walks you from creating your account to generating your first campaign images. By the end, you'll have a working workflow on the canvas and outputs you can iterate on immediately.
+
+<Frame>
+  <img src="/images/studio-canvas.png" alt="Example Rainfrog workflow on the studio canvas" />
+</Frame>
 
 <Tip>
-  If you don't have assets ready, every node type has a built-in library you can use — no uploads required to generate your first campaign.
+  If you don't have assets ready, every asset node has a built-in library you can use — no uploads required for your first run.
 </Tip>
 
 <Steps>
-  <Step title="Create your account">
-    Go to [app.rainfrog.ai/signup](https://app.rainfrog.ai/signup) and create your account. Once you're signed in, subscribe to a paid plan from the **Manage Plan** tab — Hobby, Pro, or Ultra. Each plan comes with a monthly credit allowance that powers your image and video generation. You need an active plan with credits to run generation jobs.
+  <Step title="Create your account and subscribe">
+    Go to [app.rainfrog.ai/signup](https://app.rainfrog.ai/signup) and create your account (email or Google). You can explore the studio with a free account, but **generating images and video requires an active paid plan** with credits. Open **Manage Plan** (or pricing after signup) and choose Hobby, Pro, or Ultra.
   </Step>
 
   <Step title="Create a new project">
-    After you log in, open the **Projects** tab. Click **New Project**, give your project a name, and hit **Create**. The canvas opens automatically and is ready for you to start building. Your project auto-saves as you work, so you won't lose progress if you close the tab.
+    Open the **Projects** tab. Click **New Project**, give it a name, and create it. The canvas opens and auto-saves as you work.
   </Step>
 
-  <Step title="Add a workflow template">
-    On the canvas, click **Browse Templates** — or open the **Workflows** tab in the sidebar — to see the full template library. Pick a preset that matches what you want to create:
+  <Step title="Start from a template (optional)">
+    In the studio, open the floating dock on the left and pick a template:
 
-    - **Fashion Shooting** — on-model shots with a product and a character
+    - **Fashion Shooting** — on-model shots with product and character
     - **Product Still Life** — styled product placement in an environment
     - **UGC Content** — creator-style social visuals
 
-    Selecting a template drops a pre-wired set of nodes onto your canvas, so you can see how a complete workflow is structured before you change anything.
+    Dropping a template places a pre-wired set of nodes on your canvas.
   </Step>
 
   <Step title="Connect your assets">
-    With the template on the canvas, replace the placeholder nodes with your own assets — or keep the built-in library assets for your first run:
+    Replace placeholders with your own assets — or keep built-in library assets for the first run:
 
-    1. **Product node** — drag a Product node onto the canvas and upload your product image, or select one from the built-in product library.
-    2. **Character node** — add a Character node and choose a character reference from your library or the built-in options.
-    3. **Style node** — add a Style node to define the visual aesthetic of your output.
-    4. **Environment node** — add an Environment node to set the scene or backdrop.
+    1. **Product** — select a product from your library or upload one under **Assets → Products**
+    2. **Character** — choose a stock or custom character
+    3. **Style** — pick a built-in or custom style on the Style node
+    4. **Environment** — set the scene from the library or your customs
 
-    Connect each asset node to the **Generator node** by dragging from the output port of each asset node to the corresponding input port on the generator. When all inputs are wired up, the generator node shows a ready state.
+    Connect each asset to the **Image Generator** by dragging from each node's output handle to the matching input on the generator.
   </Step>
 
   <Step title="Generate">
-    Click the **Generate** button. Rainfrog reads your node graph, assembles the AI instructions automatically, and produces a campaign set of images (or video clips, if you're using a video workflow). When generation completes, your outputs appear in the results panel.
+    On the Image Generator, choose a model and settings, check the credit cost shown on the node, then click **Generate**. When the run finishes, the result appears on the node (with earlier runs kept in history).
 
     From here, you can:
-    - **Swap a node** — disconnect an asset node, connect a different one, and click Generate again to explore a variation
-    - **Duplicate the workflow** — copy the entire graph to run parallel creative directions
-    - **Download your outputs** — save individual images or the full batch to your device
+
+    - **Swap a node** — change an asset and generate again
+    - **Add Full Body or Video** — extend the same project with specialized generators
+    - **Download** — save outputs once your plan allows downloads
   </Step>
 </Steps>
+
+## Find your way around
+
+| Nav item | What it’s for |
+|---|---|
+| **Projects** | Your canvases |
+| **Workflows** | Browse and clone gallery workflows |
+| **Assets** | Products, Characters, and Environments |
+| **Manage Plan** | Credits, upgrades, top-ups, billing |
+| **Settings** | Profile and password |
 
 ## Keep exploring
 

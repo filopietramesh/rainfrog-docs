@@ -1,24 +1,24 @@
 ---
 title: "Rainfrog Asset Libraries: Products, Characters, Styles"
 sidebarTitle: "Asset Libraries"
-description: "Manage your products, characters, styles, and environments in Rainfrog. Upload once and reuse your assets across unlimited campaigns and workflows."
+description: "Manage your products, characters, styles, and environments in Rainfrog. Upload once and reuse your assets across campaigns and workflows."
 ---
 
-Asset libraries are the building blocks of every Rainfrog workflow. Each asset type — product, character, style, and environment — maps directly to a node on the canvas. You upload or configure an asset once, and it becomes available to drop into any workflow across your account. There's no need to re-upload the same product image for every new campaign.
+Asset libraries are the building blocks of every Rainfrog workflow. Products, characters, and environments map to dashboard library pages and to nodes on the canvas. Styles are selected on the Style node in the studio. Upload or configure an asset once, and it becomes available across your projects.
 
 ## Products
 
-A product asset is the item you want to feature in your campaign. Rainfrog supports any physical product you can photograph: garments, accessories, bags, furniture, packshots, and lifestyle product images.
+A product asset is the item you want to feature: garments, accessories, bags, packshots, and lifestyle product images.
 
 <Steps>
   <Step title="Upload your product image">
-    Navigate to the **Assets** tab in the [Rainfrog studio](https://app.rainfrog.ai) and select **Products**. Click **Upload** and choose your image file. High-resolution images with a clean background yield the best results.
+    Open **Assets → Products** in the [Rainfrog studio](https://app.rainfrog.ai). Add an image file. High-resolution shots with a clean background yield the best results.
   </Step>
-  <Step title="Let Rainfrog analyze the asset">
-    After upload, Rainfrog automatically analyzes your product — identifying its shape, texture, color, and key visual properties. This analysis is what lets the generator node place the product accurately in any scene.
+  <Step title="Name and organize">
+    Give the product a clear name. Use folders to group collections or seasons.
   </Step>
-  <Step title="Drop it into a workflow">
-    Once analysis is complete, your product appears in your library. Drag it onto the canvas as a **Product node** and connect it to a generator node. You can swap the product in any existing workflow without rebuilding the rest of the graph.
+  <Step title="Use it on the canvas">
+    Add a **Product** node, select the asset, and connect it to a generator.
   </Step>
 </Steps>
 
@@ -31,17 +31,15 @@ A product asset is the item you want to feature in your campaign. Rainfrog suppo
 | Ultra | Unlimited |
 
 <Tip>
-  Upload your hero product images at the start of a season. You can reuse the same product node across 10 different workflows without re-uploading.
+  Upload hero product images at the start of a season. Reuse the same product across many workflows without re-uploading.
 </Tip>
 
 ## Characters
 
-A character asset defines the person or model who appears in your campaign. You have two options: pick a stock character from Rainfrog's built-in library, or upload your own reference image to create a custom character.
+A character defines who appears in your campaign. Pick a stock character from Rainfrog's library, or upload your own reference under **Assets → Characters**.
 
-- **Stock characters** are professionally sourced models already in Rainfrog's library. Browse and select directly from the Character node panel — no upload required.
-- **Custom characters** let you upload a reference photo of a real person or model. Rainfrog uses reference-based conditioning (not a text description) to maintain that character's face, proportions, and body language consistently across every image in your campaign.
-
-Character consistency is especially valuable for brand campaigns where you need the same talent to appear across multiple scenes and settings without a live shoot.
+- **Stock characters** — browse and select from the Character node; no upload required
+- **Custom characters** — upload a clear portrait. Rainfrog keeps likeness consistent across poses and scenes using your reference, not a text description
 
 **Character limits by plan:**
 
@@ -53,23 +51,21 @@ Character consistency is especially valuable for brand campaigns where you need 
 
 ## Styles
 
-A style asset is a visual preset that encodes three properties: **color palette**, **lighting schema**, and **mood**. Every image generated from a workflow that includes a style node inherits all three properties simultaneously — no text description needed.
+A style encodes **color**, **lighting**, and **mood**. Every image from a workflow that includes that Style node inherits the treatment.
 
-You have two ways to define a style:
+- **Built-in styles** — select them on the Style node in the studio
+- **Custom styles** — create from reference images that represent the look you want
 
-- **Built-in styles** are pre-configured by Rainfrog's creative team. Browse and select them directly from the Style node panel.
-- **Custom styles** let you upload one or more reference images that represent the visual treatment you want. Rainfrog extracts the aesthetic from your references and applies it to every image in the run.
-
-Because the style node drives the look of the entire campaign set, swapping one style node is all it takes to completely change the visual direction of a workflow.
+There is no separate Styles page under the Assets sidebar group. Styles are managed from the Style node.
 
 ## Environments
 
-An environment asset defines where your campaign takes place — the background, setting, and world that surrounds your product and character.
+An environment defines where the campaign takes place — background, setting, and spatial context.
 
-- **Built-in environments** cover common campaign scenarios: studio setups, outdoor locations, interior spaces, and abstract backgrounds.
-- **Custom environments** accept a reference image upload. Rainfrog uses the reference to anchor the composition's spatial feel, depth, and context.
+- **Built-in environments** — studio, outdoor, interior, and editorial options on the Environment node
+- **Custom environments** — upload a reference under **Assets → Environments**
 
-The environment node works alongside the style node: the style governs the *look* (color, light, mood), while the environment governs the *place* (location, setting, spatial context).
+Style governs the *look*; environment governs the *place*.
 
 **Environment limits by plan:**
 
@@ -81,14 +77,12 @@ The environment node works alongside the style node: the style governs the *look
 
 ## Managing your library
 
-All four asset types live in the **Assets** tab inside the [Rainfrog studio](https://app.rainfrog.ai). Your library is shared across every project in your account — an asset you upload in one project is immediately available in all others.
+Products, characters, and environments live under **Assets** in the sidebar. Your library is shared across every project in your account.
 
-Key things to keep in mind:
-
-- **Search and filter** your library by asset type or name to find assets quickly as your library grows.
-- **Renaming** an asset updates its name everywhere it appears in the studio.
-- **Deleting** an asset is permanent and affects every workflow that references it.
+- **Folders** help organize products and characters as the library grows
+- **Renaming** an asset updates its name in the studio
+- **Deleting** an asset is permanent and affects workflows that still reference it
 
 <Warning>
-  Deleting an asset from your library removes it from every workflow that references it. Regenerating those workflows will not include the deleted asset.
+  Deleting an asset from your library removes it from workflows that relied on it. Regenerating those workflows will not bring the deleted asset back.
 </Warning>

@@ -4,135 +4,113 @@ sidebarTitle: "FAQ"
 description: "Find answers to common questions about using Rainfrog — covering generation, credits, plans, asset management, and account support."
 ---
 
-Below are answers to the most common questions about Rainfrog, covering everything from your first generation run to credits, billing, asset management, and getting help from the team. If you don't find what you're looking for here, reach out to [support@rainfrog.ai](mailto:support@rainfrog.ai).
+Below are answers to common questions about Rainfrog. If you need more help, email [support@rainfrog.ai](mailto:support@rainfrog.ai).
 
-## Getting Started
+## Getting started
 
 <AccordionGroup>
   <Accordion title="Do I need a paid plan to use Rainfrog?">
-    No — a free account lets you explore the studio, browse workflows, and set up your asset library without subscribing. However, generating images and videos requires an active paid plan (Hobby, Pro, or Ultra). Free accounts cannot run generations.
+    You can create a free account to explore projects, browse workflows, and set up your asset library. **Generating images and video, and downloading outputs, requires an active paid plan** (Hobby, Pro, or Ultra) with credits.
   </Accordion>
 
   <Accordion title="What browsers does Rainfrog support?">
-    Rainfrog works best in modern desktop browsers: **Chrome**, **Firefox**, **Safari**, and **Edge** (latest versions recommended). Mobile browsers are not optimized for the node canvas, so use a desktop or laptop for the best experience.
+    Rainfrog works best in modern desktop browsers: **Chrome**, **Firefox**, **Safari**, and **Edge** (latest versions recommended). The node canvas is not optimized for mobile — use a desktop or laptop.
   </Accordion>
 
   <Accordion title="Do I need to know how to write AI prompts?">
-    No. Rainfrog is designed so you never write a prompt manually. You direct the AI by connecting asset nodes — products, characters, environments — through the workflow canvas. The studio translates your visual inputs into generation instructions automatically.
+    No. Rainfrog is built so you direct generation by connecting asset nodes on the canvas. An optional Text node exists when you want extra direction, but you do not need prompt engineering to get started.
   </Accordion>
 </AccordionGroup>
 
-## Generation & Output
+## Generation & output
 
 <AccordionGroup>
   <Accordion title="Why does my generation not look like my reference images?">
-    A few things to check:
+    Check the following:
 
-    - Make sure your asset nodes are **properly connected** to the generator node in the canvas.
-    - Try uploading a **higher-quality** product or character reference image — sharper, well-lit photos produce more faithful output.
-    - Switch to **Pro quality** mode in the generator node for more detail-accurate results (note: Pro quality costs more credits per run).
+    - Asset nodes are **connected** to the correct generator inputs
+    - Product and character references are **sharp and well lit**
+    - Try a **higher-fidelity model** on the Image Generator for final detail (credit cost updates on the node)
+    - For edits, wire a previous result into **References** on a new Image Generator while keeping brand assets connected
   </Accordion>
 
   <Accordion title="How many images are produced per generation run?">
-    Rainfrog generates a campaign *set* — multiple images — per run. The exact number of images in the set depends on your workflow configuration. Check the generator node settings to see the output count before you generate.
-  </Accordion>
-
-  <Accordion title="Can I generate a single image instead of a set?">
-    Rainfrog is purpose-built for campaign-set generation, so producing a single image in isolation is not the primary use case. For single-image output, adjust your workflow configuration, but keep in mind the platform is optimized for multi-asset campaign production.
+    An **Image Generator** run adds a new result to that node's history (you can keep iterating on the same node). A **Full Body Generator** run produces front, side, and back views. Build a multi-image campaign by iterating with locked assets or by using several generators in one project.
   </Accordion>
 
   <Accordion title="Why is generation taking a long time?">
-    Generation time varies based on server load and your plan tier:
-
-    - **Pro and Ultra** plans have access to the **priority generation queue**, which reduces wait times significantly.
-    - A typical image set on the priority queue completes in **under 95 seconds**.
-    - Video generation takes longer than image generation regardless of plan.
-
-    If generation is consistently slow, consider upgrading to Pro or Ultra for priority access.
+    Time varies with model, settings, and load. Video takes longer than stills. Pro and Ultra plans are prioritized during busy periods. Keep working on the canvas while jobs run in the background queue.
   </Accordion>
 
   <Accordion title="Can I use Rainfrog-generated images commercially?">
-    Yes. Images generated using your account and your uploaded assets are yours to use commercially. Review the [Terms of Service](https://app.rainfrog.ai) for full licensing details and any applicable restrictions.
+    Yes. Images generated with your account and your uploaded assets are yours to use commercially, subject to the [Terms & Conditions](https://rainfrog.ai/terms).
   </Accordion>
 </AccordionGroup>
 
-## Credits & Billing
+## Credits & billing
 
 <AccordionGroup>
   <Accordion title="How many credits does a generation cost?">
-    Credit cost depends on two factors:
-
-    - **Quality mode** — Normal quality costs fewer credits per run; Pro quality costs more.
-    - **Output type** — Video generation costs significantly more credits than image generation.
-
-    The exact credit cost for your current settings is displayed in the generator node **before** you start a run, so you always know what you're spending.
+    Cost depends on the node, model, and settings. The exact amount for your current configuration is **shown on the generator before you click Generate**.
   </Accordion>
 
   <Accordion title="My credits ran out. What should I do?">
-    You have two options:
-
-    1. **Purchase a one-time top-up** from the **Manage Plan** tab. Top-up credits never expire and are added to your balance immediately.
-    2. **Upgrade to a higher plan** (Hobby → Pro → Ultra) for a larger monthly credit allotment.
+    1. **Buy a top-up** from **Manage Plan** (**Top up credits** / **Buy 1,000 credits**). Top-ups stay until you use them.
+    2. **Upgrade** to a higher plan for a larger monthly allotment.
   </Accordion>
 
   <Accordion title="Do credits expire?">
-    It depends on the credit type:
-
-    - **Monthly subscription credits** roll over each month when your subscription renews — they accumulate rather than resetting to zero.
-    - **One-time top-up credits** never expire and remain in your account until you use them.
+    - **Subscription credits** roll over when your plan renews
+    - **Top-up credits** stay available until you use them
   </Accordion>
 
   <Accordion title="I was charged but can't access my plan features.">
-    Contact [support@rainfrog.ai](mailto:support@rainfrog.ai) with your account email address and a description of the issue. Billing-related access problems are typically resolved within **one business day**.
+    Contact [support@rainfrog.ai](mailto:support@rainfrog.ai) with your account email. Billing access issues are typically resolved within one business day.
   </Accordion>
 </AccordionGroup>
 
-## Assets & Storage
+## Assets & storage
 
 <AccordionGroup>
   <Accordion title="What image formats can I upload for assets?">
-    **JPG and PNG** are the recommended formats for all asset types (products, characters, environments). Always upload the highest-quality version of your reference image available — resolution and clarity directly affect generation fidelity.
+    **JPG and PNG** are recommended for products, characters, and environments. Upload the highest-quality reference you have — clarity improves fidelity.
   </Accordion>
 
   <Accordion title="I deleted an asset by mistake. Can I recover it?">
-    No. Asset deletion in Rainfrog is **permanent** and cannot be undone. If you need the asset again, re-upload the original file from your local storage.
+    No. Asset deletion is **permanent**. Re-upload the original file if you still have it locally.
 
     <Warning>
-      Always keep local copies of your reference images before deleting them from Rainfrog.
+      Keep local copies of important reference images before deleting them from Rainfrog.
     </Warning>
   </Accordion>
 
   <Accordion title="I'm hitting my storage limit. What can I do?">
-    You have two options:
-
-    - **Free up space** by deleting unused or outdated assets from the **Assets** tab.
-    - **Upgrade your plan** — Hobby includes 5 GB, Pro includes 10 GB, and Ultra includes 20 GB of storage.
+    - Delete unused assets under **Assets**
+    - Upgrade — Hobby includes 5 GB, Pro 10 GB, Ultra 20 GB
   </Accordion>
 
   <Accordion title="Do my assets work across all my projects?">
-    Yes. Every asset you upload to your library is available across **all projects** in your account. You don't need to re-upload the same product or character for each new project.
+    Yes. Library assets are available across all projects in your account.
   </Accordion>
 </AccordionGroup>
 
-## Account & Support
+## Account & support
 
 <AccordionGroup>
   <Accordion title="How do I contact support?">
     - **Product help and billing:** [support@rainfrog.ai](mailto:support@rainfrog.ai)
     - **Partnerships and press:** [info@rainfrog.ai](mailto:info@rainfrog.ai)
-
-    The support team aims to respond to all inquiries within one business day.
   </Accordion>
 
   <Accordion title="Can I share my workflows with teammates?">
-    Team and collaboration features depend on your current plan. For multi-seat or agency needs, contact [info@rainfrog.ai](mailto:info@rainfrog.ai) to discuss options tailored to your team.
+    Rainfrog accounts are individual today. For agency or multi-seat needs, contact [info@rainfrog.ai](mailto:info@rainfrog.ai).
   </Accordion>
 
   <Accordion title="How do I delete my account?">
-    Send a deletion request to [support@rainfrog.ai](mailto:support@rainfrog.ai) from your account email address.
+    Email [support@rainfrog.ai](mailto:support@rainfrog.ai) from your account address with subject "Account Deletion Request."
 
     <Warning>
-      Account deletion is **permanent and irreversible**. It removes all of your projects, assets, and generated content. Make sure to download anything you want to keep before submitting a deletion request.
+      Account deletion is permanent. Download anything you want to keep first.
     </Warning>
   </Accordion>
 </AccordionGroup>

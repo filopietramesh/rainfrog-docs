@@ -4,46 +4,46 @@ sidebarTitle: "Brand Consistency"
 description: "Use Rainfrog's asset anchoring and style presets to keep every campaign image on-brand — same character, product, lighting, and visual tone."
 ---
 
-Brand consistency across a campaign set means every image shares the same character, product rendering, lighting, and visual tone. Rainfrog achieves this through reference-based asset anchoring, not text prompts — so consistency is built into the structure of your workflow rather than depending on how carefully you phrase a description.
+Brand consistency across a campaign means every image shares the same character, product rendering, lighting, and visual tone. Rainfrog achieves this through reference-based assets on the canvas — not by rewriting prompts for every frame.
 
 ## Why visual consistency matters
 
-In prompt-based tools, each generation runs independently. Even a small phrasing change — or no change at all — can shift the character's face, alter the product's color temperature, or change how materials render. This visual drift makes it hard to produce a cohesive campaign set.
+In prompt-only tools, each generation runs independently. Small wording changes can shift faces, product color, or materials. That drift makes cohesive campaigns hard.
 
-Rainfrog solves this differently. Your brand's visual DNA lives in the workflow itself — in the uploaded product image, the character reference, the style preset, and the environment node. Every image generated from that workflow inherits the same anchors. Change the pose or the scene, and the character and product stay locked.
+In Rainfrog, brand DNA lives in the workflow: product image, character reference, style, and environment. Every run that keeps those nodes locked inherits the same anchors. Change pose or framing, and character and product stay aligned.
 
 ## Product anchoring
 
-Upload your actual product image as a Product asset. Rainfrog holds the product's shape, color, and material properties constant across all images generated from that workflow. You don't describe the product in words — you show it, and Rainfrog keeps it visually stable through every generation.
-
-To maintain consistency across a product line, create one Product node per SKU. Swap the active Product node between runs to generate a matching campaign set for each colorway or variant without touching anything else in the workflow.
+Upload your product under **Assets → Products** and select it on a Product node. Rainfrog holds shape, color, and material properties steady across runs that use that asset. For a product line, keep one Product node per SKU and swap between runs without touching the rest of the graph.
 
 ## Character consistency
 
-Upload a clear portrait reference for your brand's character — a well-lit front-facing photo with a neutral expression works best. Rainfrog uses reference-based conditioning to keep the character's face, proportions, and body language consistent across every pose, outfit, and environment variation.
-
-You don't need to describe the character in a prompt. The reference image carries the information, and Rainfrog applies it consistently regardless of what else changes in the scene.
+Use a clear portrait — well-lit, front-facing, neutral expression when possible. Stock or custom characters both work. Rainfrog uses the reference to keep face and proportions consistent across poses, outfits, and environments.
 
 ## Style presets
 
-Create a custom style by uploading three to five images that represent your brand's visual aesthetic — consider color palette, lighting quality, mood, and overall tonal treatment. Once saved as a Style asset, every image generated from a workflow using that style inherits the same visual treatment.
+Select a built-in style on the Style node, or create a custom style from reference images that capture your brand's color, lighting, and mood. Once the Style node is set, connected generators inherit that treatment.
 
-Built-in style presets are also available if you're starting from scratch or want to experiment before committing to a custom look.
+Keep the same Style node wired when you want a full set to feel like one shoot.
 
 ## Environment locking
 
-Define your campaign's world with an Environment node. Using the same environment node across multiple generation runs keeps the background, lighting direction, and set design consistent. If your campaign calls for a studio setup, a specific outdoor location, or an editorial interior, lock it in once and it carries through every image in the set.
+Define the world with an Environment node. Reusing the same environment across runs keeps background and spatial feel consistent. Lock a studio, outdoor location, or interior once and carry it through the campaign.
+
+## Image edits with References
+
+To refine an existing result without losing brand anchors, connect a previous image into a new Image Generator's **References** input. Keep Product, Character, Style, and Environment connected so the edit stays on-brand.
 
 ## Reviewing consistency
 
-After generating, review the full campaign set together — not image by image. Ask: do all images feel like they came from the same shoot? Look at the lighting direction, the character's facial features, the product rendering, and the overall color temperature across the set.
+Review results together — not only one frame at a time. Check lighting direction, facial features, product rendering, and color temperature across the set.
 
-If something feels off, adjust the Style node or refresh your character reference and regenerate. Because the changes are structural, every image in the new set will reflect the update uniformly.
+If something drifts, refresh the character or product reference, tighten the Style node, and regenerate. Structural changes apply uniformly on the next run.
 
 <Tip>
-  For a seasonal campaign, build one workflow with your campaign's style, environment, and character locked in. Swap only the Product node between runs to generate consistent imagery for every SKU.
+  For a seasonal campaign, lock style, environment, and character. Swap only the Product node between runs to cover every SKU with the same visual DNA.
 </Tip>
 
 <Info>
-  Rainfrog uses reference-based conditioning, not text descriptions, to maintain character and product consistency. This is why consistency doesn't break when you change the pose or environment.
+  Rainfrog leans on reference assets, not long text descriptions, to keep character and product consistent when pose or environment changes.
 </Info>

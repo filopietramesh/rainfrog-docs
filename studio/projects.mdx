@@ -4,56 +4,52 @@ sidebarTitle: "Projects"
 description: "Learn how to create, organize, and manage your Rainfrog projects — each one a saved canvas with a fully configurable node workflow inside."
 ---
 
-The Projects tab is your home base in Rainfrog. Every project is a saved canvas that holds a complete node workflow — your assets, generator nodes, connections, and outputs all live together in one place. Open a project to pick up exactly where you left off, or spin up a new one to start a fresh campaign.
+The **Projects** tab is your home base in Rainfrog. Every project is a saved canvas that holds a complete node workflow — assets, generators, connections, and outputs in one place. Open a project to pick up where you left off, or create a new one for a fresh campaign.
 
 ## Creating a project
 
 <Steps>
   <Step title="Open the Projects tab">
-    Navigate to the **Projects** tab in the main sidebar. You'll see all your existing projects here, along with your usage against your plan limit.
+    Navigate to **Projects** in the main sidebar. You'll see your existing projects and usage against your plan limit.
   </Step>
   <Step title="Click New Project">
-    Click **New Project** in the top-right corner. Give your project a name that reflects the campaign or concept you're building.
+    Click **New Project**, give your project a name, and create it.
   </Step>
   <Step title="Start building on the canvas">
-    The canvas opens automatically. Drag nodes from the sidebar, connect them, and click **Generate** to produce your first outputs.
+    The canvas opens automatically. Add nodes from the floating dock, connect them, and click **Generate**.
   </Step>
 </Steps>
 
-You can also create a project by cloning an existing one. Open the options menu (⋯) next to any project and select **Duplicate**. The clone opens as a new project with the full workflow copied over.
+You can also duplicate a project from the options menu (⋯) on a project card. The clone opens as a new project with the workflow copied over.
 
 ## The project canvas
 
-Once you're inside a project, you're working on the node canvas. The canvas is where your entire generation workflow lives — from raw asset inputs to final campaign outputs.
+Inside a project you work on the node canvas:
 
-- **Drag nodes** from the sidebar panel onto the canvas. Asset nodes (Product, Character, Style, Environment) and generator nodes are both available.
-- **Connect nodes** by dragging from an output handle on an asset node to the matching input handle on a generator node.
-- **Click Generate** to run the graph. Rainfrog processes each connected node and produces your campaign imagery.
-- **Normal vs. Pro quality** — toggle the quality mode in the generator node settings. Pro mode takes longer but produces higher-fidelity results.
+- **Add nodes** from the floating dock — assets, specialized generators, Image Generator, Video Generator, and notes
+- **Connect nodes** by dragging from an output handle to an input handle
+- **Choose a model** on the generator, check the credit cost, then click **Generate**
+- **Start from a template** — Fashion Shooting, Product Still Life, or UGC Content from the dock
 
-The canvas **auto-saves continuously**. Every change you make — moving a node, updating a connection, adjusting a setting — is saved instantly. You never need to manually save.
+The canvas **auto-saves** as you work. You never need a separate save step for normal editing.
 
 ## Organizing your projects
 
-Keep your workspace clean and your campaigns easy to find with these project management actions, all accessible from the options menu (⋯) on any project card.
-
 | Action | How to do it |
 |---|---|
-| **Rename** | Click the project name directly, or choose **Rename** from the options menu. |
-| **Duplicate** | Select **Duplicate** from the options menu to create an identical copy with a new name. |
-| **Delete** | Select **Delete** from the options menu. This action is permanent. |
+| **Rename** | Use the options menu (⋯) or inline rename where available |
+| **Duplicate** | Select **Duplicate** from the options menu |
+| **Delete** | Select **Delete** from the options menu. This is permanent |
 
 <Warning>
-  Deleting a project permanently removes its canvas, nodes, and all generated outputs. This cannot be undone.
+  Deleting a project permanently removes its canvas, nodes, and generated outputs in that project. This cannot be undone.
 </Warning>
 
 <Tip>
-  Duplicate a project before making major changes — it's a fast way to create an A/B variant of a campaign workflow.
+  Duplicate a project before major experiments — a fast way to create an A/B variant of a campaign workflow.
 </Tip>
 
 ## Project limits
-
-The number of projects you can have active at one time depends on your plan.
 
 | Plan | Project limit |
 |---|---|
@@ -61,13 +57,11 @@ The number of projects you can have active at one time depends on your plan.
 | Pro | 25 projects |
 | Ultra | Unlimited |
 
-If you reach your plan's limit, delete an existing project or upgrade to make room. See [Plans and Credits](/plans-and-credits) for details on upgrading your plan.
+If you hit the limit, delete a project you no longer need or upgrade. See [Plans and Credits](/plans-and-credits).
 
 ## Undo and redo
 
-Rainfrog tracks your full edit history within a session so you can step back through any change.
+- **Undo** — `Cmd+Z` (Mac) or `Ctrl+Z` (Windows/Linux)
+- **Redo** — `Cmd+Shift+Z` (Mac) or `Ctrl+Shift+Z` (Windows/Linux)
 
-- **Undo** — press `Cmd+Z` (Mac) or `Ctrl+Z` (Windows/Linux)
-- **Redo** — press `Cmd+Shift+Z` (Mac) or `Ctrl+Shift+Z` (Windows/Linux)
-
-Undo and redo apply to canvas actions: adding or removing nodes, connecting handles, and moving elements. History resets when you close the project tab.
+Undo and redo apply to canvas edits in the current session.

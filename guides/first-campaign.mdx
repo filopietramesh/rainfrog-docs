@@ -1,50 +1,54 @@
 ---
 title: "Generate Your First AI Campaign with Rainfrog Studio"
 sidebarTitle: "First Campaign"
-description: "Build your first node-based workflow from scratch and generate a complete, visually consistent AI campaign set in under 95 seconds."
+description: "Build your first node-based workflow from scratch and generate campaign-ready images in Rainfrog studio."
 ---
 
-This guide walks you through building your first workflow from scratch and generating a complete campaign set — from uploading assets to reviewing your first outputs. By the end, you'll have a working node graph and a full set of campaign images ready to iterate on.
+This guide walks you through building a workflow from scratch and generating your first campaign images — from uploading assets to reviewing outputs. By the end, you'll have a working node graph you can iterate on.
 
 <Steps>
   <Step title="Sign in and create a project">
-    Go to [https://app.rainfrog.ai](https://app.rainfrog.ai) and sign in to your account. Open the **Projects** tab and click **New Project**. Give your project a name — something like "Spring Campaign" works well. The visual canvas opens automatically and is ready for you to start adding nodes.
+    Go to [https://app.rainfrog.ai](https://app.rainfrog.ai) and sign in. Open **Projects** and click **New Project**. Name it something like "Spring Campaign." The canvas opens ready for nodes.
   </Step>
 
   <Step title="Upload your product">
-    Open the **Assets** tab in the sidebar and click **+** under **Products**. Upload a product image in JPG or PNG format — a clean background makes it easier for Rainfrog to anchor the product's shape, color, and material properties. Rainfrog analyzes the asset automatically after upload. Once the analysis completes, return to the canvas.
+    Expand **Assets** in the sidebar and open **Products**. Upload a product image (JPG or PNG). A clean background makes it easier for Rainfrog to keep the product faithful. Return to your project canvas when you are done.
   </Step>
 
   <Step title="Add asset nodes">
-    From the canvas sidebar, drag the following four nodes onto the canvas:
+    From the floating dock, add:
 
-    - **Product node** — select the product image you just uploaded
-    - **Character node** — pick a character from the stock library or upload your own portrait reference
-    - **Style node** — choose a built-in style preset or upload reference images that represent your visual aesthetic
-    - **Environment node** — pick a setting from the library (studio, outdoor, editorial, etc.)
+    - **Product** — select the product you uploaded
+    - **Character** — pick stock or a custom character from your library
+    - **Style** — choose a built-in or custom style
+    - **Environment** — pick a setting from the library
 
-    Position the nodes however feels natural — Rainfrog reads the connections, not the layout.
+    Layout is flexible — Rainfrog reads connections, not pixel positions.
   </Step>
 
-  <Step title="Connect to the generator">
-    Drag the output handle on the right side of each asset node to the corresponding input handle on the **Generator** node. Connect all four — Product, Character, Style, and Environment. When all four connections are in place, the Generator node is ready to run.
+  <Step title="Connect to the Image Generator">
+    Add an **Image Generator** if the canvas does not already have one. Drag each asset node's output handle to the matching input on the Image Generator (**Products**, **Character**, **Style**, **Environment**).
   </Step>
 
-  <Step title="Choose quality and generate">
-    In the Generator node, select either **Normal** or **Pro** quality. Normal is faster and uses fewer credits. Pro produces more detail and is better suited for final campaign delivery. Click **Generate**. Rainfrog runs the graph and produces a complete campaign set of images — typically in under 95 seconds.
+  <Step title="Choose a model and generate">
+    On the Image Generator, pick a model and settings. Check the credit cost shown on the node, then click **Generate**. The result appears on the node when the run finishes. Earlier runs stay in history.
   </Step>
 
   <Step title="Review and iterate">
-    Browse the generated images in the output panel. If you want to adjust the result, swap an asset node — for example, change the Environment node to a different setting, or replace the Style node with a different preset — and click **Generate** again. You don't need to rewrite any prompts. Every change is structural: you modify the graph, not a text description.
+    If you want a different look, swap the Environment or Style node and generate again. You do not rewrite prompts — you change the graph.
   </Step>
 </Steps>
 
+## Optional: Full Body views
+
+For multi-angle character + product shots, add a **Full Body Generator**, connect Character and Products, and generate. You get **front**, **side**, and **back** outputs you can review or wire into further Image Generators as references.
+
 <Tip>
-  Don't have product photos ready? Every node type has a built-in library. You can generate a full campaign without uploading anything on your first run.
+  Don't have product photos ready? Use built-in library assets on every asset node for your first successful run.
 </Tip>
 
 <Note>
-  The campaign set contains multiple images per generation — not a single image. This is intentional: all images share the same visual DNA and are meant to be used together.
+  Each Image Generator run adds a new result to that node's history. Build a campaign lookbook by iterating with the same character, product, style, and environment — or by placing several generators in one project.
 </Note>
 
 ## What's next
@@ -55,13 +59,13 @@ This guide walks you through building your first workflow from scratch and gener
     icon="palette"
     href="/guides/brand-consistency"
   >
-    Learn how to lock your character, product, style, and environment across every image in a campaign.
+    Learn how to lock character, product, style, and environment across every image in a campaign.
   </Card>
   <Card
-    title="Understanding Workflows"
-    icon="diagram-project"
-    href="/concepts/workflows"
+    title="Video Generation"
+    icon="film"
+    href="/guides/video-generation"
   >
-    Go deeper on how the node graph works and how Rainfrog uses your asset connections to produce a campaign set.
+    Turn a strong still workflow into short-form motion with the Video Generator.
   </Card>
 </CardGroup>
