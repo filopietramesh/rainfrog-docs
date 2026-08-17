@@ -21,6 +21,19 @@ Each run produces a new result on that node. Previous results stay in the node's
 
 Reuse the same character, product, style, and environment across runs (or across several generators in one project) to keep a campaign visually consistent.
 
+### Composing a scene from multiple items
+
+An Image Generator is not limited to a single product. You can bring several items into one frame:
+
+- **Multiple Product nodes** — wire more than one Product node into the same Image Generator. Rainfrog resolves every connected product and includes it in the scene. Use this when the items already live in your product library.
+- **Image nodes for one-off references** — for an item that isn't a saved product (a door, a window, a piece of furniture, a fixture), add an **Image** node, upload the reference, and wire it into the generator's **References** input. Rainfrog treats it as visual guidance for the composition, not as a prompt.
+
+Combine both patterns to place several referenced items into one environment. For example, wire a Product node for the main item, one or more Image nodes for supporting references, and an Environment node for the setting.
+
+<Tip>
+  Rainfrog composes items into the scene — it does not perform pixel-perfect compositing. Use clean, well-lit reference images and iterate on the environment or style if placement drifts.
+</Tip>
+
 ## Choosing an image model
 
 The Image Generator exposes a model picker. Models differ in fidelity, speed, and credit cost. Broadly:
