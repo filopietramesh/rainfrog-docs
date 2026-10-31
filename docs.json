@@ -63,6 +63,15 @@
             ]
           },
           {
+            "group": "ChatGPT",
+            "pages": [
+              "chatgpt/overview",
+              "chatgpt/connect",
+              "chatgpt/use-rainfrog",
+              "chatgpt/faq"
+            ]
+          },
+          {
             "group": "Account",
             "pages": [
               "account/manage-plan",
