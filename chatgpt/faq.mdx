@@ -1,0 +1,86 @@
+---
+title: "Rainfrog in ChatGPT FAQ"
+sidebarTitle: "FAQ"
+description: "Answers about plans, credits, privacy, studio limits, disconnecting, and support when using Rainfrog from ChatGPT."
+---
+
+Common questions about Rainfrog in ChatGPT. For studio-wide account help, see the main [FAQ](/account/faq).
+
+## Plans and credits
+
+<AccordionGroup>
+  <Accordion title="Do I need a paid Rainfrog plan?">
+    You need a Rainfrog account to connect. **Generating images and video requires an active paid plan with credits** — the same Hobby, Pro, or Ultra plans as the studio. Explore libraries and projects with a free account, but generations spend credits from **Manage Plan**.
+  </Accordion>
+
+  <Accordion title="Do ChatGPT generations cost extra?">
+    No separate MCP fee. Generations use your normal Rainfrog credits. Exact cost depends on what you run; in the studio, cost is shown on the generator before you run. Buy top-ups or upgrade from **Manage Plan**.
+  </Accordion>
+
+  <Accordion title="Does my ChatGPT plan matter?">
+    Yes. Custom MCP connectors are only available on ChatGPT plans and workspaces that allow them. If you cannot add a custom MCP server, check OpenAI’s current connector settings for your account.
+  </Accordion>
+</AccordionGroup>
+
+## What’s shared
+
+<AccordionGroup>
+  <Accordion title="What can ChatGPT access after I Allow?">
+    ChatGPT uses the Rainfrog connector you authorized to work with your workspace — projects, assets, and generations you ask for. You can revoke access anytime under **Settings → Connected apps**, or Deny specific action families in agent permissions.
+  </Accordion>
+
+  <Accordion title="Are my assets and projects the same as in the studio?">
+    Yes. ChatGPT and the web studio share one Rainfrog account. Characters, products, environments, and projects you create in either place show up in both.
+  </Accordion>
+
+  <Accordion title="Do I need an API key?">
+    No. Connection uses OAuth only. Never paste passwords, tokens, or keys into chat.
+  </Accordion>
+</AccordionGroup>
+
+## Limits vs studio
+
+<AccordionGroup>
+  <Accordion title="Can I do everything from ChatGPT that I do in the studio?">
+    ChatGPT covers campaigns, assets, projects, canvas edits, generation, and export for many workflows. Fine-grained art direction is often easier on the [node canvas](/concepts/node-canvas). Billing, checkout, and some account admin stay in the Rainfrog app.
+  </Accordion>
+
+  <Accordion title="Where do I manage billing?">
+    Open **Manage Plan** in [app.rainfrog.ai](https://app.rainfrog.ai). See [Plans & Credits](/plans-and-credits) and [Manage Plan](/account/manage-plan).
+  </Accordion>
+</AccordionGroup>
+
+## Disconnect and reconnect
+
+<AccordionGroup>
+  <Accordion title="How do I disconnect Rainfrog from ChatGPT?">
+    In Rainfrog, go to the dashboard → **Settings** → **Connected apps** and remove the connector. You can also remove the custom MCP server from ChatGPT’s connector settings.
+  </Accordion>
+
+  <Accordion title="How do I reconnect?">
+    Follow [Connect](/chatgpt/connect) again: add `https://mcp.rainfrog.ai/mcp`, complete OAuth, and click **Allow** on the Rainfrog consent screen.
+  </Accordion>
+
+  <Accordion title="ChatGPT can’t connect or authorization loops">
+    Confirm the URL is exactly `https://mcp.rainfrog.ai/mcp`, that you clicked **Allow** on Rainfrog, and that your ChatGPT plan supports custom MCP. Sign out and retry the OAuth flow once. If it still fails, email [support@rainfrog.ai](mailto:support@rainfrog.ai) with your Rainfrog account email.
+  </Accordion>
+</AccordionGroup>
+
+## Support
+
+<AccordionGroup>
+  <Accordion title="How do I get help?">
+    Email [support@rainfrog.ai](mailto:support@rainfrog.ai) for product and billing help. For partnerships, use [info@rainfrog.ai](mailto:info@rainfrog.ai).
+  </Accordion>
+</AccordionGroup>
+
+## Keep exploring
+
+<CardGroup cols={2}>
+  <Card title="Overview" icon="book" href="/chatgpt/overview">
+    What Rainfrog in ChatGPT is and when to use it.
+  </Card>
+  <Card title="Connect" icon="plug" href="/chatgpt/connect">
+    Custom MCP URL, OAuth, and Connected apps.
+  </Card>
+</CardGroup>

@@ -1,0 +1,67 @@
+---
+title: "Connect Rainfrog to ChatGPT"
+sidebarTitle: "Connect"
+description: "Add Rainfrog as a custom MCP connector in ChatGPT, sign in with OAuth, and confirm the connection."
+---
+
+Connect Rainfrog once with a custom MCP URL. ChatGPT opens Rainfrog’s sign-in and consent screen, then you can use Rainfrog from a new chat.
+
+<Tip>
+  Rainfrog is not listed in the ChatGPT directory yet. Use the **custom MCP** steps below — do not look for a directory install.
+</Tip>
+
+## Before you start
+
+- Sign up or sign in at [app.rainfrog.ai](https://app.rainfrog.ai)
+- Confirm you have a paid plan with credits if you plan to generate ([Plans & Credits](/plans-and-credits))
+- Use ChatGPT on the web with a plan or workspace that allows custom MCP connectors
+
+<Steps>
+  <Step title="Open custom MCP settings in ChatGPT">
+    In ChatGPT, open your connector or plugin settings and choose to **add a custom MCP server** (wording may vary slightly by ChatGPT version).
+  </Step>
+
+  <Step title="Paste the Rainfrog MCP URL">
+    Enter this URL exactly:
+
+    ```text
+    https://mcp.rainfrog.ai/mcp
+    ```
+
+    Save or continue. ChatGPT starts the Rainfrog authorization flow.
+  </Step>
+
+  <Step title="Allow access on Rainfrog">
+    Sign in to Rainfrog if prompted. On the consent screen, review what ChatGPT can access, then click **Allow**.
+  </Step>
+
+  <Step title="Confirm and start a chat">
+    Return to ChatGPT and confirm the connector is connected. Open a **new chat** and ask Rainfrog to help — for example, list your projects or start a campaign from a preset.
+  </Step>
+</Steps>
+
+<Note>
+  You never paste API keys or secrets into chat. Connection uses OAuth only.
+</Note>
+
+## Disconnect or limit access
+
+- **Revoke the app:** In Rainfrog, open the dashboard → **Settings** → **Connected apps**, then remove ChatGPT (or the connector you authorized).
+- **Limit agent actions:** In Rainfrog, open agent permission settings and set **Deny** for action families you do not want the connector to perform (read, add, edit, delete, or generate).
+
+After you revoke, reconnect anytime by repeating the steps above.
+
+## Other MCP clients
+
+The same URL works in other MCP clients. Add `https://mcp.rainfrog.ai/mcp` as a connector, complete OAuth when prompted, and use your Rainfrog account.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Use Rainfrog" icon="comments" href="/chatgpt/use-rainfrog">
+    Try campaigns, assets, projects, and exports from ChatGPT.
+  </Card>
+  <Card title="ChatGPT FAQ" icon="circle-question" href="/chatgpt/faq">
+    Credits, what’s shared, limits vs studio, and reconnect help.
+  </Card>
+</CardGroup>
