@@ -63,6 +63,13 @@
             ]
           },
           {
+            "group": "MCP",
+            "pages": [
+              "mcp/overview",
+              "mcp/setup"
+            ]
+          },
+          {
             "group": "ChatGPT",
             "pages": [
               "chatgpt/overview",

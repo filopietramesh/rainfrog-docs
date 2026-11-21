@@ -17,7 +17,7 @@ Use the **Image Generator** node for stills. Wire in a product, character, style
 Each run produces a new result on that node. Previous results stay in the node's history so you can compare iterations. Specialized generators work differently:
 
 - **Full Body Generator** — produces **front**, **side**, and **back** views in one run
-- **Outfit Sheet Generator** — produces an outfit / flat-lay sheet
+- **Character Sheet Generator** — produces one character sheet of a character wearing your products
 
 Reuse the same character, product, style, and environment across runs (or across several generators in one project) to keep a campaign visually consistent.
 
@@ -36,24 +36,27 @@ Combine both patterns to place several referenced items into one environment. Fo
 
 ## Choosing an image model
 
-The Image Generator exposes a model picker. Models differ in fidelity, speed, and credit cost. Broadly:
+The Image Generator has a model picker. New Image Generators start on **Rainfrog Core**.
 
-| Kind of model | Best for |
+| Model | Notes |
 |---|---|
-| **Faster / standard** | Drafts, exploration, quick iteration |
-| **Higher-fidelity / Pro** | Final campaign frames, client delivery, finer product detail |
+| **Rainfrog Core** | Default. No **References** input. |
+| **Nano Banana Pro** | Accepts **References** |
+| **Nano Banana 2.1** | Accepts **References** |
+| **GPT Image 2.5 Sunburst** | Accepts **References**. Up to 2K. |
+| **Seedream 5.0 Pro** | Accepts **References**. Up to 2K. |
 
-Exact names and options appear in the studio (for example Gemini Flash–class and Nano Banana / Seedream–class models). The **credit cost for your current settings is shown on the generator before you run**, so you always know what a click will spend.
+On the node you also pick an **aspect ratio** (`1:1`, `16:9`, `9:16`, `4:3`, `3:4`) and a **resolution** (`1K`, `2K`, `4K`, where the model supports it). The **credit cost for your current settings is shown on the generator before you run**, so you always know what a click will spend.
 
 <Tip>
-  Iterate with a faster model while you lock composition and casting. Switch to a higher-fidelity model when you are ready to deliver.
+  Switching an Image Generator to **Rainfrog Core** removes any wires on its **References** input. Pick another model when the shot depends on reference pictures.
 </Tip>
 
 ## Video generation
 
 To produce motion, add a **Video Generator** node. Video is a separate node from Image Generator — you do not flip an image node into video mode.
 
-The Video Generator lets you pick a **video model**. Each model expects different inputs (for example a starting image, first and last frames, or extra image/video references). Connect the inputs shown on the node for the model you selected, then generate.
+The Video Generator lets you pick a **video model**: **Kling 2.6**, **Kling 3.0** (default), **Seedance 2.0**, or **Seedance 2.5**. Each model expects different inputs, such as a first frame, a last frame, or several character, product, image, and video references. Connect the inputs shown on the node for the model you selected, then generate. The full input list per model is in [Node Canvas](/concepts/node-canvas#video-generator-inputs-by-model).
 
 Video uses more credits than a typical still, and runtime depends on clip length and model. Details: [Video generation](/guides/video-generation).
 

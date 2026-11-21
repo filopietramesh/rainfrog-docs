@@ -18,10 +18,12 @@
 | **Character** | Do not use “Model” in user docs (internal code name) |
 | **Image Generator** | Not a generic “Generator” that also produces video |
 | **Video Generator** | Separate node from Image Generator |
-| **Full Body Generator** / **Outfit Sheet Generator** | Specialized generators; name them explicitly |
+| **Full Body Generator** / **Character Sheet Generator** | Specialized generators; name them explicitly |
 | **Workflows** | Dashboard gallery of cloneable workflows |
-| **Templates** | Fashion Shooting, Product Still Life, UGC — added from the **studio** canvas dock |
-| **Assets** | Sidebar group for **Products**, **Characters**, and **Environments** |
+| **Templates** | Fashion Shooting, Product Still Life, UGC Content, Cinema — added from the **studio** canvas dock |
+| **Products** / **Characters** / **Environments** | Separate sidebar items (no **Assets** group) |
+| **Canvas** / **Studio** | Project mode toggle: node graph vs. simple form |
+| **MCP** | Sidebar page with the server URL `https://mcp.rainfrog.ai/mcp`; OAuth only, never API keys |
 | **Style** | Chosen on the Style node in studio (no separate Styles dashboard page) |
 | **Manage Plan** | Its own nav item — not nested under Settings |
 | **Credits** | Shown in the studio header; cost preview appears on the generator before you run |

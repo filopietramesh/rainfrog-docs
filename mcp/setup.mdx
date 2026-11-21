@@ -1,0 +1,152 @@
+---
+title: "Set Up the Rainfrog MCP Server"
+sidebarTitle: "Set up MCP"
+description: "Connect Rainfrog to ChatGPT, Claude, Claude Code, Cursor, Grok Bot, or any remote MCP client with the server URL and OAuth sign-in."
+---
+
+Every client uses the same server URL:
+
+```text
+https://mcp.rainfrog.ai/mcp
+```
+
+Sign-in happens with OAuth. When the client asks, sign in to Rainfrog and approve access. Never paste a password, key, or token into a chat.
+
+## Before you start
+
+- A Rainfrog account at [app.rainfrog.ai](https://app.rainfrog.ai)
+- An active plan if you want to generate (generation uses your credits)
+- A client that supports remote MCP servers
+
+<Tabs>
+  <Tab title="ChatGPT">
+    <Steps>
+      <Step title="Open Plugins">
+        In ChatGPT on the web, open **Plugins**.
+      </Step>
+      <Step title="Add a custom MCP server">
+        Select the **+** button, then **Add custom MCP server**. Name it **Rainfrog** and paste `https://mcp.rainfrog.ai/mcp` under **Connection**.
+      </Step>
+      <Step title="Choose OAuth">
+        Choose **OAuth**, acknowledge the risk warning, and select **Create as a plugin**.
+      </Step>
+      <Step title="Sign in to Rainfrog">
+        Sign in to your Rainfrog account and approve access when ChatGPT asks.
+      </Step>
+      <Step title="Start a chat">
+        Start a new chat, type `@`, and select **Rainfrog**.
+      </Step>
+    </Steps>
+    <Note>
+      Business and Enterprise/Edu workspaces can use the full tool set when an admin allows custom MCP connections. More detail in [Connect ChatGPT](/chatgpt/connect).
+    </Note>
+  </Tab>
+  <Tab title="Claude">
+    Works in Claude on the web, desktop, and mobile.
+
+    <Steps>
+      <Step title="Open Connectors">
+        Open **Settings → Connectors** in Claude.
+      </Step>
+      <Step title="Add a custom connector">
+        Choose **Add custom connector**, name it **Rainfrog**, and paste `https://mcp.rainfrog.ai/mcp` as the URL.
+      </Step>
+      <Step title="Sign in to Rainfrog">
+        Sign in and approve access when Claude opens the authorization page.
+      </Step>
+      <Step title="Test it">
+        Ask Claude to list your Rainfrog projects.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Claude Code">
+    Run this in your terminal:
+
+    ```bash
+    claude mcp add --transport http rainfrog https://mcp.rainfrog.ai/mcp
+    ```
+
+    Finish the Rainfrog sign-in in the browser when prompted. Then ask Claude Code to list your Rainfrog projects.
+
+    For extra Rainfrog skills on top of the server, install the Rainfrog plugin from inside Claude Code:
+
+    ```text
+    /plugin marketplace add Mesh-Flow-AI/rainfrog-claude-plugin
+    /plugin install rainfrog@rainfrog
+    ```
+  </Tab>
+  <Tab title="Cursor">
+    Select **Add to Cursor** on the **MCP** page in Rainfrog, or add this to your MCP config:
+
+    ```json
+    {
+      "mcpServers": {
+        "rainfrog": {
+          "url": "https://mcp.rainfrog.ai/mcp"
+        }
+      }
+    }
+    ```
+
+    Put it in **Cursor Settings → MCP**, in `~/.cursor/mcp.json` for every project, or in `.cursor/mcp.json` for one project. Complete the Rainfrog sign-in when Cursor asks, then open **Agent** and ask it to list your Rainfrog projects.
+  </Tab>
+  <Tab title="Grok Bot">
+    Grok Bot has no settings form for custom servers. You add Rainfrog from a chat.
+
+    <Steps>
+      <Step title="Open a Bot chat">
+        Open any Bot chat in Grok Bot. This is the always-on agent app, not the Grok chatbot.
+      </Step>
+      <Step title="Send the setup message">
+        ```text
+        Add a custom MCP server named Rainfrog at https://mcp.rainfrog.ai/mcp using Streamable HTTP. Do not paste any key, token, or password. When the server is added, start the Rainfrog OAuth sign-in.
+        ```
+      </Step>
+      <Step title="Confirm and sign in">
+        Check that the confirmation card names Rainfrog and shows the Rainfrog URL, then add it. Choose **Authorize** and sign in to Rainfrog.
+      </Step>
+      <Step title="Test it">
+        Ask the Bot to list your Rainfrog projects.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Other clients">
+    Any client that supports remote Streamable HTTP MCP servers with OAuth can connect.
+
+    1. Create a remote MCP server named **Rainfrog**.
+    2. Set its Streamable HTTP URL to `https://mcp.rainfrog.ai/mcp`.
+    3. Start the connection and complete the Rainfrog sign-in.
+    4. Ask the client to list your Rainfrog projects.
+  </Tab>
+</Tabs>
+
+## Control what the assistant can do
+
+Rainfrog groups assistant actions into **Read**, **Add**, **Edit**, **Delete**, and **Generate**. For each one you can pick:
+
+- **Ask** — the assistant asks you to confirm in the chat first
+- **Always allow** — the action runs without asking until you change it
+- **Deny** — the action is blocked
+
+By default, **Read** and **Add** are allowed and the rest ask first. The assistant can't change these settings.
+
+## Disconnect
+
+To remove access, open **Settings → Connected apps** in Rainfrog and revoke the client. You can also remove the server from the client's own settings.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The client asks for an API key">
+    Rainfrog doesn't use API keys. Choose **OAuth** as the authentication method, or leave the key field empty and start the connection.
+  </Accordion>
+  <Accordion title="Sign-in finished but tools don't show up">
+    Start a new chat and select Rainfrog again. In ChatGPT, type `@` and pick **Rainfrog**.
+  </Accordion>
+  <Accordion title="Generation fails from the assistant">
+    Check your plan and credit balance under **Manage Plan**. Assistant runs use the same credits as the studio.
+  </Accordion>
+  <Accordion title="A localhost URL doesn't work">
+    Cloud clients such as Grok Bot and ChatGPT can't reach `localhost`. Always use `https://mcp.rainfrog.ai/mcp`.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,53 @@
+---
+title: "Rainfrog MCP: Use Rainfrog from AI Assistants"
+sidebarTitle: "What is MCP"
+description: "Connect Rainfrog to ChatGPT, Claude, Cursor, and other MCP clients so an AI assistant can build canvases, generate images and video, and export results with your account."
+---
+
+The **Model Context Protocol (MCP)** is an open standard that lets AI assistants use outside apps. Rainfrog runs an MCP server, so you can ask an assistant such as ChatGPT, Claude, or Cursor to work in your Rainfrog account for you.
+
+The assistant uses the same projects, libraries, and credits you see at [app.rainfrog.ai](https://app.rainfrog.ai). Everything it creates shows up in your **Projects**, ready to open on the canvas.
+
+## What an assistant can do
+
+With Rainfrog connected, you can ask in plain language to:
+
+- **Plan a campaign** — build a full graph with characters, products, styles, and generators
+- **Generate a single image** — a product still, a fashion shot, or a UGC frame
+- **Revise a shot** — change pose, light, or setting and regenerate
+- **Manage your libraries** — list, add, or create products, characters, and environments
+- **Build workflows** — place templates, add nodes, and connect them on the canvas
+- **Make video** — turn a finished still into a clip with a Video Generator
+- **Export** — get links to your finished images and videos
+
+In clients that support it, Rainfrog can also open an interactive studio view inside the chat.
+
+### Example prompts
+
+```text
+List my Rainfrog projects.
+Create a fashion editorial for my linen shirt with a warm film look.
+Make a product still life of my perfume on travertine, 4:5.
+Regenerate the second shot with softer light.
+Turn the best shot into a 5-second video.
+```
+
+## How it connects
+
+| | |
+| --- | --- |
+| **Server URL** | `https://mcp.rainfrog.ai/mcp` |
+| **Transport** | Remote Streamable HTTP |
+| **Sign-in** | OAuth with your Rainfrog account |
+
+The URL is public and is not a secret. You never paste an API key, token, or password into the assistant. When you connect, the client opens a Rainfrog page where you sign in and approve access.
+
+You can also find the URL and setup steps in the app under **MCP** in the sidebar.
+
+## Credits and access
+
+MCP has no separate fee. Generations started from an assistant use your normal Rainfrog [credits](/concepts/generation), with the same costs as the studio. You need an active Rainfrog plan to generate.
+
+<Card title="Set up MCP" icon="plug" href="/mcp/setup">
+  Step-by-step setup for ChatGPT, Claude, Claude Code, Cursor, Grok Bot, and other clients.
+</Card>
