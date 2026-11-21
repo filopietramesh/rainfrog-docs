@@ -1,90 +1,153 @@
 ---
-title: "Rainfrog Node Canvas: Connect Nodes, Generate Campaigns"
+title: "Rainfrog Node Canvas: Nodes, Connections, and Navigation"
 sidebarTitle: "Node Canvas"
-description: "Learn how Rainfrog's visual node canvas replaces text prompts with a drag-and-connect workflow that drives AI image and video generation."
+description: "Learn every Rainfrog node, how inputs and outputs connect, and how to pan, zoom, select, and use shortcuts on the studio canvas."
 ---
 
-The Rainfrog node canvas is your creative workspace. Instead of starting from a blank text prompt, you build a visual graph by connecting asset nodes to generator nodes — and Rainfrog's graph engine handles the rest. Every decision you make on the canvas, from the product you're featuring to the lighting style you want, becomes part of the generation automatically.
+The Rainfrog node canvas is your creative workspace. Instead of starting from a blank text prompt, you build a visual graph by connecting asset nodes to generator nodes. Rainfrog reads the graph and assembles the generation for you. Every choice on the canvas, from the product you feature to the lighting style, becomes part of the result.
 
 <Frame>
   <img src="/images/studio-canvas.png" alt="Rainfrog studio canvas with Character, Product, Full Body Generator, Style, Environment, and Image Generator nodes connected" />
 </Frame>
 
+## Canvas and Studio modes
+
+Every project opens in one of two modes. Switch with the **Canvas** / **Studio** toggle at the top of the project.
+
+| Mode | What you see | Best for |
+| --- | --- | --- |
+| **Canvas** | The full node graph | Building and editing workflows by hand |
+| **Studio** | A form with **Image** and **Video** tabs, plus a gallery of results | Quick runs from a template without wiring nodes |
+
+Studio mode still builds real nodes. Each run you start there places a generator on the project canvas, so you can switch to **Canvas** anytime and keep editing. On phones and tablets, projects open in Studio mode only.
+
 ## The canvas at a glance
 
-When you open a project in the [Rainfrog studio](https://app.rainfrog.ai), you start on a blank canvas. Add nodes from the floating dock on the left (or from the canvas context menu), wire them together, and click **Generate**. The canvas auto-saves your work as you go, so you never lose progress mid-session.
+When you open a project in the [Rainfrog studio](https://app.rainfrog.ai) in **Canvas** mode, you see:
 
-Think of the canvas as a visual recipe. Each node you place represents one ingredient — a product, a character, a style, a setting — and the connections between them tell Rainfrog how those ingredients relate in the final output.
+- **Floating dock** (left) — tabs for **Templates**, **Nodes**, **Products**, **Characters**, and **Brand assets** (team workspaces). Click or drag an item onto the canvas.
+- **Credits** — your balance in the studio header
+- **Generation queue** — runs in progress and finished runs
+- **Shortcuts** — the **i** button in the bottom-left corner lists every canvas shortcut
 
-You can also drop a **template** from the dock (Fashion Shooting, Product Still Life, or UGC Content) to place a pre-wired graph and start faster.
+The canvas auto-saves as you work.
 
-## Node types
+## Add nodes
 
-Rainfrog nodes fall into four groups.
+You can add a node in three ways:
 
-### Asset and input nodes
+1. **Floating dock** — open the **Nodes** tab and click or drag a node onto the canvas
+2. **Right-click** — right-click empty canvas to open the add node menu at that spot. Type to search.
+3. **Drag from an image output** — drag a wire from an image output into empty space, then choose **Create Video** or **Edit Image**
 
-| Node | Role |
-|---|---|
-| **Product** | Holds the product you want to feature — a garment, bag, packshot, or any physical item |
-| **Character** | Defines the person in the scene, from Rainfrog's stock library or your own reference |
-| **Style** | Encodes the visual treatment: color palette, lighting, and mood |
-| **Environment** | Sets the scene — the background or setting your product and character inhabit |
-| **Text** | Optional description text you can enhance from graph context |
-| **Image** | An uploaded still image you can wire into generators as a reference |
-| **Video** | An uploaded video clip used as a reference for supported video models |
+The add node menu groups nodes the same way everywhere:
 
-### Specialized generators
+| Group | Nodes |
+| --- | --- |
+| **Generators** | Image Generator, Video Generator |
+| **Input** | Character, Product, Style, Environment |
+| **Utility** | Full Body Generator, Character Sheet Generator, Text, Note |
+| **Media** | Image, Video |
 
-| Node | Role |
-|---|---|
-| **Full Body Generator** | Builds front, side, and back views of a character wearing your products |
-| **Outfit Sheet Generator** | Produces a flat-lay / outfit sheet from a character and products |
+Templates (**Fashion Shooting**, **Product Still Life**, **UGC Content**, and **Cinema**) live in the dock's **Templates** tab. Each one places a pre-wired graph. See [Templates & Gallery](/guides/templates-gallery).
 
-### Output nodes
+## How each node works
 
-| Node | Role |
-|---|---|
-| **Image Generator** | Main still-image output. Accepts description, characters, products, references, style, and environment |
-| **Video Generator** | Short-form video output. Inputs change based on the video model you select |
+Every node has **output handles** on its right edge and **input handles** on its left edge. Handle labels tell you what a handle sends or expects.
 
-### Utility
+### Input nodes
 
-| Node | Role |
-|---|---|
-| **Note** | A sticky note on the canvas — for your own comments, not wired into generation |
+| Node | What it does | Output |
+| --- | --- | --- |
+| **Character** | The person in the scene. Pick a stock or custom character from your library. | **Character Ref** |
+| **Product** | The item you want to feature, from your product library | **Product Image** |
+| **Style** | The visual treatment: color, light, film look. Pick a built-in or custom style. | **Style Preset** |
+| **Environment** | The setting or background | **Environment** |
+| **Text** | Optional direction: action, pose, framing. Not needed for most runs. | **Text** |
+| **Image** | A still you upload or drop onto the canvas, used as a reference | **Image** |
+| **Video** | A clip you upload, used as a reference by Seedance video models | **Video** |
 
-<Note>
-  Rainfrog is designed for creative direction, not prompt engineering. Most workflows run without writing prompts. The optional **Text** node is there when you want extra direction — not as the primary way to drive the studio.
-</Note>
+### Generators
 
-## How the graph becomes a generation
+| Node | Inputs | Output |
+| --- | --- | --- |
+| **Image Generator** | **Description**, **Character**, **Products**, **References**, **Style**, **Environment** | **Result Image** |
+| **Full Body Generator** | **Character**, **Products** | **Front View**, **Side View**, **Back View** |
+| **Character Sheet Generator** | **Character**, **Products** | **Output** (one character sheet) |
+| **Video Generator** | Changes with the video model you pick | **Result Video** |
 
-When you click **Generate** on an Image Generator, Full Body Generator, Outfit Sheet Generator, or Video Generator, Rainfrog resolves every connected input and assembles the generation automatically. You stay focused on which assets are wired — not on crafting a prompt from scratch.
+**Character** and **Products** inputs accept several wires. Other inputs take one wire.
 
-## Connecting nodes
+The Image Generator's **References** input takes extra pictures, such as an Image node or an earlier result. When references are connected, the generator edits from those pictures. The default **Rainfrog Core** model has no **References** input. Pick another image model when your shot needs reference pictures.
 
-To connect two nodes, drag from the **output handle** (the dot on the right edge) of a source node to the **input handle** (the dot on the left edge) of a generator or other target node. A wire appears between them, confirming the connection.
+### Video Generator inputs by model
 
-A few things to know:
+| Video model | Inputs |
+| --- | --- |
+| **Kling 2.6** | **Text**, **Image** (first frame), **End image** |
+| **Kling 3.0** | **Text**, **First Frame**, **Last Frame**, **References** (characters and products) |
+| **Seedance 2.0** / **Seedance 2.5** | **Character**, **Products**, **Environment**, **Image assets**, **Video assets** |
 
-- You can connect multiple products or characters to a single Image Generator when the handles allow it.
-- Input labels on the generator tell you what each handle expects (for example **Products**, **Character**, **References**, **Style**, **Environment**).
-- To remove a connection, click the wire and press **Delete**, or drag the handle away from its target.
+When you switch models, the handles change. Wires that the new model can't use are removed. See [Video generation](/guides/video-generation).
+
+### Note
+
+A **Note** is a sticky note for your own comments. It has no handles and is never part of a generation.
+
+## Connect nodes
+
+Drag from an **output handle** on one node to a matching **input handle** on another. A wire appears when the connection is valid.
+
+- Connect outputs to inputs of the same kind, for example **Product Image** to **Products**
+- An image output (an Image node or any generated still) can feed **References** or **Character** on an Image Generator
+- An image output can also feed a Video Generator's first or last frame
+- To remove a wire, click it and press `Delete`
+
+### Common patterns
+
+| Goal | Wiring |
+| --- | --- |
+| **Product still** | Product → **Products**. Optional Style, Environment, and Text. |
+| **Fashion shot** | Character → **Character**, Product → **Products**. Optional Style, Environment, and Text. |
+| **Same person, several scenes** | Character and Products into a Full Body Generator. Wire **Front View** into **Character** on each Image Generator. |
+| **Edit a result** | Drag from the result and choose **Edit Image**. Rainfrog adds an Image Generator with the result in **References** and a Text node for your change. |
+| **Image to video** | Drag from the result and choose **Create Video**. Rainfrog adds a Video Generator with the still as its first frame. |
 
 <Tip>
-  Connecting an existing image output into a new Image Generator's **References** input is a common way to iterate or edit a previous result without rebuilding the whole graph.
+  Changing one node changes one variable. Keep the character, product, and style wired while you swap the piece you want to explore.
 </Tip>
 
-## Undo, redo, and auto-save
+## Move around the canvas
 
-Every change you make on the canvas — adding a node, connecting wires, choosing an asset — is auto-saved to your project. You don't need to manually save.
+| Action | How |
+| --- | --- |
+| **Pan** | Scroll, hold `Space` and drag, or drag with the middle mouse button |
+| **Zoom** | Hold `Cmd` (Mac) or `Ctrl` (Windows) and scroll, or pinch on a trackpad |
+| **Select a node** | Click it |
+| **Multi-select** | `Shift` + click |
+| **Box select** | Drag on empty canvas |
+| **Move nodes** | Drag a node, or drag a selection |
+| **Find your nodes** | Use the recenter button to bring your graph back into view |
 
-If you make a mistake or want to backtrack, use the standard keyboard shortcuts:
+## Keyboard shortcuts
 
-- **Undo:** `Cmd + Z` (Mac) / `Ctrl + Z` (Windows)
-- **Redo:** `Cmd + Shift + Z` (Mac) / `Ctrl + Shift + Z` (Windows)
+| Shortcut | Action |
+| --- | --- |
+| `Cmd`/`Ctrl` + `C` | Copy selected nodes |
+| `Cmd`/`Ctrl` + `V` | Paste at the cursor |
+| `Option`/`Alt` + drag a node | Duplicate the node |
+| `Cmd`/`Ctrl` + `Z` | Undo |
+| `Cmd`/`Ctrl` + `Shift` + `Z` | Redo |
+| `Delete` / `Backspace` | Delete the selected nodes or wire |
+| Right-click | Open the add node menu |
+| `Cmd`/`Ctrl` + `S` | Save the project now |
+
+Shortcuts pause while you type in a text field. Click the **i** button on the canvas to see the list anytime.
+
+## Generate from the graph
+
+Click **Generate** on any generator. Rainfrog follows every wire into that generator and builds the generation from the connected assets. The credit cost for the current settings is shown on the generator before you run. See [Generation](/concepts/generation).
 
 <Note>
-  Your node configuration stays inside the project. Come back later, swap a node, and regenerate anytime.
+  Your graph stays in the project. Come back later, swap a node, and generate again.
 </Note>
